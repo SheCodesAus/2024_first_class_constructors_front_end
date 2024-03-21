@@ -1,3 +1,21 @@
-# Front End Template
+# Gift Compare Website
 
-This repo contains a freshly initialised React project. That means you won't need to create a project with Vite. Just clone this repo down and you're ready to start working together on your project's front end. Remember to use good Git technique and co-ordinate with one another!
+Welcome to the Gift Compare! This project helps users find the perfect gift for any occasion.
+
+## Getting Started
+
+To get started with this project, follow these steps:
+
+### Clone the Repository
+
+1. First, clone the repository to your local machine.
+2. Navigate to the project directory and install dependencies using: npm i
+3. Start the development server to view the project in your browser: npm run dev
+
+## Using Tailwind
+You can apply Tailwind CSS styles directly to your HTML elements by adding Tailwind classes.
+For example, to add padding to a div element, you can use the p-4 class:
+
+```<div class="p-4">This is a div with padding</div>```
+
+Our customises Tailwind CSS for Gift Compare can be viewed in the tailwind.config.js
