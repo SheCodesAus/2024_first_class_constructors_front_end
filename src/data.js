@@ -37,30 +37,30 @@ export const AllCategories = [
 export const allGifts= [
     {
         "id": 1,
-        "name": "Gift 1",
+        "name": "AMAZING GIFT 1",
         "description": "Description for Gift 1",
-        "price": "29.99",
-        "img": "src/assets/Images/pexels-photo-751373.jpeg",
+        "price": "$29.99",
+        "img":  "src/assets/Images/christmas-xmas-gifts-presents.webp",
         "featured_time": "2024-03-23T20:00:00+08:00",
         "source_url": "https://example.com",
         "categories": [1]
     },
     {
         "id": 2,
-        "name": "Gift 2",
+        "name": "AMAZING GIFT 2",
         "description": "Description for Gift 2",
         "price": "39.99",
-        "img": "https://picsum.photos/id/237/200/300",
+        "img": "src/assets/Images/bow_asset2.png",
         "featured_time": "2024-03-24T20:00:00+08:00",
         "source_url": "https://example.com",
         "categories": [2]
     },
     {
         "id": 3,
-        "name": "Gift 3",
+        "name": "AMAZING GIFT 3",
         "description": "Description for Gift 3",
         "price": "49.99",
-        "img": "https://picsum.photos/id/237/200/300",
+        "img": "src/assets/Images/pexels-photo-3905850.webp",
         "featured_time": "2024-03-25T20:00:00+08:00",
         "source_url": "https://example.com",
         "categories": [3]
