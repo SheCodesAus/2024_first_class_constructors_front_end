@@ -20,7 +20,7 @@ function GiftCard(props) {
   };
 
   return (
-    <div className="w-auto mx-4 my-8 p-4 sm:w-1/2 md:w-1/3 lg:w-1/4 flex flex-col">
+    <div className="w-full p-4 flex flex-col">
       <div>
         <Link to="/GiftDetailPage">
           <div
