@@ -11,11 +11,6 @@ export default function HomePage() {
       <div>
         <TrendingSection />
       </div>
-      {/* <div className="flex flex-col justify-center">
-      {allGifts.map((giftData, index) => (
-        <GiftCard key={index} giftData={giftData} />
-      ))}
-      </div> */}
     </div>
   );
 }
