@@ -18,7 +18,7 @@ function TrendingSection() {
     <div className="flex flex-col justify-center align-center space-y-8">
       <div className="bg-[url('src/assets/Images/photo-1513151233558-d860c5398176.jpeg')] bg-cover bg-center flex justify-center items-center h-full">
         <div className="bg-primary-300 px-6 my-14 md:mx-40 md:px-10 lg:px-20">
-        <h1 className="font-fredoka text-slate-100 text-[28px] text-center tracking-wider uppercase px-1">
+        <h1 className="font-fredoka text-slate-100 text-h1 text-center tracking-wider uppercase px-1">
           Trending Gifts
         </h1>
         </div>
