@@ -19,9 +19,8 @@ function NavBar() {
     </div>
     <div>
         <nav>
-          <ul className="flex flex-row space-x-3 justify-center m-3">
+          <ul className="flex flex-row space-x-3 justify-center m-3 bg-primary-400">
             <li><NavLink to="/">HOME</NavLink></li>
-            <li>TRENDING</li>
             <li>WEDDING</li>
             <li>BIRTHDAY</li>
             <li>GRADUATION</li>
