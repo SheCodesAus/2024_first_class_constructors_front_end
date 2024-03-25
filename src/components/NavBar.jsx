@@ -13,13 +13,13 @@ function NavBar() {
       <div className="m-4 flex flex-col items-center">
         <img
           src="src/assets/Images/A_ good_gift_makes_every_moment_happy.svg"
-          alt="Gift compare"
+          alt="A good gift"
           className="w-44 h-18"
         />
     </div>
     <div>
         <nav>
-          <ul className="flex flex-row space-x-3 justify-center m-3 bg-primary-400">
+          <ul className="flex flex-wrap space-x-3 justify-center m-3 bg-primary-400">
             <li><NavLink to="/">HOME</NavLink></li>
             <li>WEDDING</li>
             <li>BIRTHDAY</li>
