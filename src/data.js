@@ -4,9 +4,9 @@ export const oneGift = [
         "name": "Gift 1",
         "description": "Description for Gift 1",
         "price": "29.99",
-        "img": "https://example.com/image1.jpg",
+        "img": "https://images.pexels.com/photos/4207785/pexels-photo-4207785.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "featured_time": "2024-03-23T20:00:00+08:00",
-        "source_url": "https://example.com",
+        "source_url": "https://www.pexels.com/photo/scandinavian-room-interior-with-mockup-photo-frame-and-vase-4207785/",
         "categories": [1]
     }
 ]
@@ -220,7 +220,7 @@ export const allGifts= [
         "name": "Gift 19",
         "description": "Description for Gift 19",
         "price": "209.99",
-        "img": "src/assets/Images/christmas-xmas-gifts-presents.webp",
+        "img": "https://images.pexels.com/photos/1528975/pexels-photo-1528975.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "featured_time": "2024-04-10T20:00:00+08:00",
         "source_url": "https://example.com",
         "categories": [1, 2, 3, 4]
