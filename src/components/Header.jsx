@@ -10,12 +10,12 @@ function Header() {
           <img
             src="src/assets/Images/GiftIconVector.svg"
             alt="Gift Compare Icon"
-            className="w-auto h-7"
+            className="w-auto h-6"
           />
           <img
             src="src/assets/Images/SignInIconVector.svg"
             alt="Sign In Compare Icon"
-            className="w-auto h-7"
+            className="w-auto h-6"
           />
         </div>
       </div>
