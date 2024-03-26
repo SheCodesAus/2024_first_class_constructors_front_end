@@ -15,6 +15,11 @@ function GiftCard(props) {
       return;
     }
 
+      // Check if there are already 4 gifts in the array
+  if (existingGifts.length >= 4) {
+    alert("You can only compare up to 4 gifts!");
+    return;
+  }
     // Add the current giftData to the existing gifts array
     const updatedGifts = [...existingGifts, giftData];
 
