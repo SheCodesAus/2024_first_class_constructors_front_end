@@ -10,11 +10,12 @@ module.exports = {
         'montserrat': ['Montserrat', 'sans-serif'],
       },
       fontSize: {
-        'h1': '42px',
+        'h1': '28px',
         'h2': '24px', // Size for h2
         'h3': '18px', // Size for h3
-        'h4': '14px', // Size for h4
-        'h5': '12px', // Size for h5
+        'h4': '16px', // Size for h4
+        'h5': '15px', // Size for h5
+        'h6': '14px', // Size for h6
         'p': '18px', // Size for p
       },
       colors: {

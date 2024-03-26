@@ -2,35 +2,20 @@ import { NavLink } from "react-router-dom";
 
 function NavBar() {
   return (
-    <div>
-      <div className="m-4 flex flex-col items-center">
-        <img
-          src="src/assets/Images/GIFT_COMPARE_LOGO.svg"
-          alt="Gift compare"
-          className="w-max-w-lg h-16"
-        />
-     </div>  
-      <div className="m-4 flex flex-col items-center">
-        <img
-          src="src/assets/Images/A_ good_gift_makes_every_moment_happy.svg"
-          alt="A good gift"
-          className="w-44 h-18"
-        />
-    </div>
+
     <div>
         <nav>
-          <ul className="flex flex-wrap space-x-3 justify-center m-3 bg-primary-400">
-            <li><NavLink to="/">HOME</NavLink></li>
-            <li>WEDDING</li>
-            <li>BIRTHDAY</li>
-            <li>GRADUATION</li>
-            <li>ANNIVERSARY</li>
-            <li>CHRISTMAS</li>
-            <li>SALE</li>
+          <ul className="flex flex-wrap space-x-7 justify-center my-4 px-5 py-2 bg-primary-400 md:space-x-10 lg:space-x-20">
+            {/* <li className="font-fredoka text-h5 text-primary-100 uppercase hover:text-primary-300"><NavLink to="/">Home</NavLink></li> */}
+            <li className="font-fredoka text-h6 text-primary-100 uppercase hover:text-primary-300">WEDDING</li>
+            <li className="font-fredoka text-h6 text-primary-100 uppercase hover:text-primary-300"><NavLink to="BirthdayPage">Birthday</NavLink></li>
+            <li className="font-fredoka text-h6 text-primary-100 uppercase hover:text-primary-300">GRADUATION</li>
+            <li className="font-fredoka text-h6 text-primary-100 uppercase hover:text-primary-300"><NavLink to="AnniversaryPage">Anniversary</NavLink></li>
+            <li className="font-fredoka text-h6 text-primary-100 uppercase hover:text-primary-300">CHRISTMAS</li>
+            <li className="font-fredoka text-h6 text-primary-100 uppercase hover:text-primary-300">SALE</li>
           </ul>
         </nav>
       </div>
-    </div>
   );
 }
 
