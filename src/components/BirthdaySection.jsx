@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 // import useGifts from "../hooks/use-gifts";
 
 import { allGifts } from "../data";
@@ -8,11 +8,15 @@ import { allGifts } from "../data";
 import GiftCard from "./GiftCard";
 
 function BirthdaySection() {
-  // const { gifts, isLoading, error } = useGifts();
-  // const [errorMessage, setErrorMessage] = useState(null);
+
+
+  const { gifts, isLoading, error } = useGifts();
+  const [errorMessage, setErrorMessage] = useState(null);
+
+
 
   // using .concat to show images suited to category. CHANGE LATER
-  const BirthdayGifts = allGifts
+  const birthdayGifts = allGifts
     .filter((gift) => gift.categories.includes(1))
     .slice(0, 1)
     .concat(allGifts.filter((gift) => gift.categories.includes(1)).slice(2, 3))
@@ -30,7 +34,7 @@ function BirthdaySection() {
         </div>
       </Link>
       <div className="flex flex-wrap md:mx-6 lg:mx-20">
-        {BirthdayGifts.map((giftData, key) => (
+        {birthdayGifts.map((giftData, key) => (
           <div className="w-full sm:w-1/2 md:w-1/3">
             <GiftCard key={key} giftData={giftData} />
           </div>

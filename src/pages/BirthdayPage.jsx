@@ -1,19 +1,34 @@
 import React from "react";
-// import { useState, useEffect } from 'react';
-// import useGifts from "../hooks/use-gifts";
+import { useState, useEffect } from 'react';
+import useGifts from "../hooks/use-gifts";
 
-import { allGifts } from "../data";
+// import { allGifts } from "../data";
 
 import GiftCard from "../components/GiftCard";
 
 function BirthdayPage() {
-  // const { gifts, isLoading, error } = useGifts();
-  // const [errorMessage, setErrorMessage] = useState(null);
+  const { gifts, isLoading, error } = useGifts();
+  const [errorMessage, setErrorMessage] = useState(null);
 
   // Get the last 4 latest gifts as featured for now - TO BE UPDATED FEATURED TIME!
-  const BirthdayGifts = allGifts.filter((gift) =>
+  const BirthdayGifts = gifts.filter((gift) =>
     gift.categories.includes(1)
   );
+
+  useEffect(() => {
+    if (error) {
+      setErrorMessage("Error fetching projects. Please try again later.");
+    }
+  }, [error]);
+
+  if (isLoading) {
+    return <p>Is Loading</p>
+    // <IsLoading />;
+  }
+
+  if (error) {
+    return <p>{errorMessage}</p>;
+  }
 
   return (
     <div className="flex flex-col justify-center align-center space-y-8 m-12">
