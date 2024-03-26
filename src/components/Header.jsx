@@ -5,7 +5,7 @@ function Header() {
   return (
     <div className="mt-6">
       <div className="mx-4 flex flex-row justify-between">
-        <h6 className="text-primary-200">$ AUD</h6>
+        <h6 className="font-fredoka text-primary-200">$ AUD</h6>
         <div className="flex flex-row gap-4">
           <img
             src="src/assets/Images/GiftIconVector.svg"
