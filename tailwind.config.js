@@ -14,8 +14,7 @@ module.exports = {
         'h2': '24px', // Size for h2
         'h3': '18px', // Size for h3
         'h4': '16px', // Size for h4
-        'h5': '15px', // Size for h5
-        'h6': '14px', // Size for h6
+        'h5': '12px', // Size for h5
         'p': '18px', // Size for p
       },
       colors: {
