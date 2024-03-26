@@ -23,4 +23,5 @@ dist-ssr
 *.sln
 *.sw?
 
+# it’s best practice to never commit a .env to git.
 .env
