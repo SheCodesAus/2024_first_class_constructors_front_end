@@ -8,6 +8,7 @@ import BirthdayPage from "./pages/BirthdayPage.jsx";
 import AnniversaryPage from "./pages/AnniversaryPage.jsx";
 
 import App from "./app.jsx";
+import WeddingPage from "./pages/WeddingPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,7 @@ const router = createBrowserRouter([
       { path: "/", element: <HomePage /> },
       { path: "BirthdayPage", element: <BirthdayPage /> },
       { path: "AnniversaryPage", element: <AnniversaryPage /> },
+      { path: "WeddingPage", element: <WeddingPage /> },
     ],
   },
 ]);
