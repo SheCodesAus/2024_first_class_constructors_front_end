@@ -9,6 +9,17 @@ function GiftCard(props) {
     // Retrieve existing gifts from localStorage or initialize as an empty array
     const existingGifts = JSON.parse(localStorage.getItem("gifts")) || [];
 
+    // Check if the gift already exists in the array
+    if (existingGifts.some(gift => gift.id === giftData.id)) {
+      alert("This gift is already in the compare list!");
+      return;
+    }
+
+      // Check if there are already 4 gifts in the array
+  if (existingGifts.length >= 4) {
+    alert("You can only compare up to 4 gifts!");
+    return;
+  }
     // Add the current giftData to the existing gifts array
     const updatedGifts = [...existingGifts, giftData];
 
