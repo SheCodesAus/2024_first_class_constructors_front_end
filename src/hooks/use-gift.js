@@ -1,3 +1,4 @@
+
 import{ useState, useEffect }from"react";
 
 import getGift from"../api/get-gift";
@@ -9,7 +10,7 @@ export default function useGift() {
 
 
     useEffect(() =>{
-        getGift(giftId)
+        getGift(gift.id)
         .then((gift) =>{
         setGift(gift);
         setIsLoading(false);
@@ -19,7 +20,7 @@ export default function useGift() {
             setError(error);
             setIsLoading(false);
         });
-    }, [giftId]);
+    }, [gift.id]);
    
 
     return{ gift, isLoading, error };
