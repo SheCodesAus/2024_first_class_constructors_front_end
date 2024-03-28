@@ -1,4 +1,4 @@
-export const oneGift = [
+export const oneGift = 
     {
         "id": 1,
         "name": "Gift 1",
@@ -9,7 +9,7 @@ export const oneGift = [
         "source_url": "https://www.pexels.com/photo/scandinavian-room-interior-with-mockup-photo-frame-and-vase-4207785/",
         "categories": [1]
     }
-]
+
 
 export const AllCategories = [
     {
