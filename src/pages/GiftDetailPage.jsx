@@ -7,9 +7,9 @@ import { allGifts } from "../data";
 
 function GiftDetailPage() {
   const { id } = useParams(); // Retrieve the id parameter from the URL
-  const gift = allGifts.find(g => g.id === parseInt(id));
+  const giftData = allGifts.find(g => g.id === parseInt(id));
 
-  if (!gift) {
+  if (!giftData) {
     // update to 404 page nor found
     return <p>Gift not found for ID: {id}</p>;
   }
@@ -30,6 +30,17 @@ function GiftDetailPage() {
     // Retrieve existing gifts from localStorage or initialize as an empty array
     const existingGifts = JSON.parse(localStorage.getItem("gifts")) || [];
 
+    // Check if the gift already exists in the array
+    if (existingGifts.some(gift => gift.id === giftData.id)) {
+      alert("This gift is already in the compare list!");
+      return;
+    }
+
+      // Check if there are already 4 gifts in the array
+  if (existingGifts.length >= 4) {
+    alert("You can only compare up to 4 gifts!");
+    return;
+  }
     // Add the current giftData to the existing gifts array
     const updatedGifts = [...existingGifts, giftData];
 
@@ -37,7 +48,7 @@ function GiftDetailPage() {
     localStorage.setItem("gifts", JSON.stringify(updatedGifts));
 
     alert("Gift added to compare list!");
-    console.log(updatedGifts);
+    console.log(updatedGifts)
   };
 
   return (
@@ -55,8 +66,8 @@ function GiftDetailPage() {
           <div className="p-20 mb-12 flex flex-row justify-start items-start w-full h-full bg-pink-400 bg-opacity-10 rounded-md overflow-hidden shadow-lg border border-primary-600 border-opacity-80">
             <div className="flex-shrink-0 w-2/5">
               <img
-                src={gift.img}
-                alt={gift.name}
+                src={giftData.img}
+                alt={giftData.name}
                 className="object-cover  rounded-md overflow-hidden shadow-lg border border-primary-600 border-opacity-80"
               />
             </div>
@@ -64,13 +75,13 @@ function GiftDetailPage() {
             <div className="w-full md:w-3/5 flex flex-col m-12 justify-between">
               <div>
                 <h3 className="font-fredoka text-primary-100 text-h1 tracking-wider uppercase font-semibold mt-2">
-                  {gift.name}
+                  {giftData.name}
                 </h3>
                 <p className="font-montserrat text-primary-100 text-h2 tracking-wider uppercase  mt-2">
-                  {gift.description}
+                  {giftData.description}
                 </p>
                 <h3 className="font-montserrat text-primary-100 text-[22px] tracking-wider mt-3">
-                  {gift.price}
+                  {giftData.price}
                 </h3>
               </div>
 
