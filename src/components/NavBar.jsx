@@ -9,7 +9,7 @@ function NavBar() {
             {/* <li className="font-fredoka text-h5 text-primary-100 uppercase hover:text-primary-300"><NavLink to="/">Home</NavLink></li> */}
             <li className="font-fredoka text-h5 text-primary-100 uppercase hover:text-primary-300"><NavLink to="WeddingPage">Wedding</NavLink></li>
             <li className="font-fredoka text-h5 text-primary-100 uppercase hover:text-primary-300"><NavLink to="BirthdayPage">Birthday</NavLink></li>
-            <li className="font-fredoka text-h5 text-primary-100 uppercase hover:text-primary-300">GRADUATION</li>
+            <li className="font-fredoka text-h5 text-primary-100 uppercase hover:text-primary-300"><NavLink to="GraduationPage">Graduation</NavLink></li>
             <li className="font-fredoka text-h5 text-primary-100 uppercase hover:text-primary-300"><NavLink to="AnniversaryPage">Anniversary</NavLink></li>
             <li className="font-fredoka text-h5 text-primary-100 uppercase hover:text-primary-300">CHRISTMAS</li>
             <li className="font-fredoka text-h5 text-primary-100 uppercase hover:text-primary-300">SALE</li>
