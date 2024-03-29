@@ -33,7 +33,7 @@ function GiftCard(props) {
   return (
     <div className="w-full p-4 flex flex-col">
       <div>
-        <Link to="/GiftDetailPage">
+        <Link to={`/gift/${giftData.id}`}>
           <div
             className="rounded-md relative overflow-hidden bg-white border-[1px]  border-primary-600 border-opacity-80"
             style={{ paddingBottom: "100%" }}
