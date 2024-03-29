@@ -6,7 +6,7 @@ import GiftCard from "../components/GiftCard";
 
 function BirthdayPage() {
   const { gifts, isLoading, error } = useGifts();
-  const [errorMessage, setErrorMessage] = useState();
+  const [errorMessage, setErrorMessage] = useState(null);
 
   
   // Get the last 4 latest gifts as featured for now - TO BE UPDATED FEATURED TIME!
