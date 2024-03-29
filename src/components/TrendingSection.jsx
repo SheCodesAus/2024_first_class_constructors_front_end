@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import getFeaturedGifts from "../api/get-featured-gifts.js";
 // import { useState, useEffect } from 'react';
 // import useGifts from "../hooks/use-gifts";
 
