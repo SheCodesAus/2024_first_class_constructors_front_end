@@ -33,8 +33,8 @@ function BirthdaySection() {
       </Link>
       <div className="flex flex-wrap md:mx-6 lg:mx-20">
         {BirthdayGifts.map((giftData, key) => (
-          <div className="w-full sm:w-1/2 md:w-1/3">
-            <GiftCard key={giftData.id} giftData={giftData} />
+          <div key={giftData.id} className="w-full sm:w-1/2 md:w-1/3">
+          <GiftCard giftData={giftData} />
           </div>
         ))}
       </div>
