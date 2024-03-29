@@ -12,7 +12,7 @@ function WeddingSection() {
   // const [errorMessage, setErrorMessage] = useState(null);
 
   // using .concat to show images suited to category. CHANGE LATER
-  const AnniversaryGifts = allGifts
+  const WeddingGifts = allGifts
     .filter((gift) => gift.categories.includes(3))
     .slice(1, 3)
     .concat(allGifts.filter((gift) => gift.categories.includes(3)).slice(4, 5));
