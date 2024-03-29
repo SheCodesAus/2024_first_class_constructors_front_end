@@ -12,8 +12,6 @@ import App from "./app.jsx";
 import WeddingPage from "./pages/WeddingPage.jsx";
 import GraduationPage from "./pages/GraduationPage.jsx";
 import ChristmasPage from "./pages/ChristmasPage.jsx";
-import SalePage from "./pages/SalePage.jsx";
-
 
 const router = createBrowserRouter([
   {
@@ -26,7 +24,6 @@ const router = createBrowserRouter([
       { path: "WeddingPage", element: <WeddingPage /> },
       { path: "GraduationPage", element: <GraduationPage /> },
       { path: "ChristmasPage", element: <ChristmasPage /> },
-      { path: "SalePage", element: <SalePage /> },
       { path: "gift/:id", element: <GiftDetailPage /> },
     ],
   },
