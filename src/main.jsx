@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./pages/HomePage.jsx";
 import BirthdayPage from "./pages/BirthdayPage.jsx";
 import AnniversaryPage from "./pages/AnniversaryPage.jsx";
+import GiftDetailPage from "./pages/GiftDetailPage.jsx";
 
 import App from "./app.jsx";
 import WeddingPage from "./pages/WeddingPage.jsx";
@@ -22,6 +23,7 @@ const router = createBrowserRouter([
       { path: "AnniversaryPage", element: <AnniversaryPage /> },
       { path: "WeddingPage", element: <WeddingPage /> },
       { path: "GraduationPage", element: <GraduationPage /> },
+      { path: "gift/:id", element: <GiftDetailPage /> },
     ],
   },
 ]);
