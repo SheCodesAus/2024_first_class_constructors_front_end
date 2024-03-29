@@ -1,9 +1,9 @@
-import{ useState, useEffect }from"react";
+import{ useState, useEffect } from "react";
 
 import getGifts from "../api/get-gifts";
 
 export default function useGifts() {
-    const [gifts, setGifts] =useState();
+    const [gifts, setGifts] =useState([]);
     const [isLoading, setIsLoading] =useState(true);
     const [error, setError] =useState();
 
@@ -22,5 +22,5 @@ export default function useGifts() {
     }, []);
    
 
-    return{ gifts, isLoading, error };
+    return { gifts, isLoading, error };
 }
