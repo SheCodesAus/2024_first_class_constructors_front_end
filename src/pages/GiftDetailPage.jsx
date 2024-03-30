@@ -79,8 +79,6 @@ function GiftDetailPage() {
 
             <CompareButton onClick={handleAddGift} />
 
-            
-
             <Link to={gift.source_url}>
               <button className="flex justify-center bg-white border rounded-md border-primary-200 text-primary-200 hover:bg-primary-200 hover:text-white  font-montserrat text-h4 uppercase text-center my-5 w-full p-4 backdrop:tracking-wider">
                 BUY ITEM HERE
