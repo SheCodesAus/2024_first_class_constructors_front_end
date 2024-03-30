@@ -4,17 +4,15 @@ import useGift from "../hooks/use-gift";
 import CompareButton from "../components/CompareButton.jsx";
 
 function GiftDetailPage() {
-  const { id } = useParams(); // Retrieve the id parameter from the URL
+  const { id } = useParams(); 
   const { gift, isLoading, error } = useGift(id);
-  
-  // const giftData = allGifts.find(g => g.id === parseInt(id)); AS: I think this was a way to get the gift from the dummy data since we couldn't use the get/use-gift? Is there any other reason for this? to be removed
   
   if (isLoading) {
     return <p>Loading...</p>; // Render loading state if data is being fetched
   }
 
   if (error || !gift) {
-    return <p>Gift not found for ID: {id}</p>; // Render error message if gift data is not available AS: I want to make this better. 
+    return <p>Sorry, we couldn't find the gift you're looking for </p>;
   }
 
   const handleAddGift = () => {
@@ -32,8 +30,7 @@ function GiftDetailPage() {
     }
       
       const updatedGifts = [...existingGifts, gift]; // Add the current gift to the existing gifts array
-
-      
+    
       localStorage.setItem("gifts", JSON.stringify(updatedGifts)); // Save the updated gifts array to localStorage
 
       alert("Gift added to compare list!");
