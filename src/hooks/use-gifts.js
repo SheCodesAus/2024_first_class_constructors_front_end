@@ -10,15 +10,15 @@ export default function useGifts() {
 
     useEffect(() =>{
         getGifts()
-        .then((gifts) => {
-        setGifts(gifts);
-        setIsLoading(false);
-        })
+            .then((gifts) => {
+                setGifts(gifts);
+                setIsLoading(false);
+            })
 
-        .catch((error) =>{
-            setError(error);
-            setIsLoading(false);
-        });
+            .catch((error) =>{
+                setError(error);
+                setIsLoading(false);
+            });
     }, []);
    
 
