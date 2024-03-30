@@ -7,7 +7,7 @@ import GiftCard from "./GiftCard";
 
 function BirthdaySection() {
   const { gifts, isLoading, error } = useGifts();
-  const [errorMessage, setErrorMessage] = useState(null);
+  // const [errorMessage, setErrorMessage] = useState(null);
 
   const BirthdayGifts = gifts
     .filter((gift) => gift.categories.includes(1)).slice(0, 3)  
