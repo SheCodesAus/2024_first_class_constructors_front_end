@@ -29,7 +29,7 @@ function ChristmasPage() {
           </h1>
         </div>
       </div>
-      
+
       <div className="flex flex-wrap md:mx-6 lg:mx-20">
         {ChristmasGifts.map((giftData) => (
           <div key={giftData.id} className="w-full sm:w-1/2 md:w-1/3">
