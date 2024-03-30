@@ -7,13 +7,13 @@ async function getGifts() {
     if (!response.ok) {
         const fallbackError =`Error fetching gifts`;
 
-    const data =await response.json().catch(() =>{
-        throw new Error(fallbackError);
-    });
+        const data =await response.json().catch(() =>{
+            throw new Error(fallbackError);
+        });
 
-    const errorMessage = data?.detail?? fallbackError;
-    throw new Error(errorMessage);
-}
+        const errorMessage = data?.detail?? fallbackError;
+        throw new Error(errorMessage);    
+    }
 
 return await response.json();
 }
