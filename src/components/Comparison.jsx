@@ -36,11 +36,11 @@ function Comparison() {
                 </div>
             </div>
             <div className=" bg-cover bg-center flex justify-center items-center h-full">
-                {gifts.map((giftData) => (
-                    <div key={giftData.id} className="w-full sm:w-1/2 md:w-1/3">
-                        <GiftComparisonCard giftData={giftData} />
-                    </div>
-                ))}
+                {gifts.length >= 2 ? (
+                    gifts.map((gift) => <GiftComparisonCard giftData={gift} />)
+                ) : (
+                    <p>Add gifts to your comparsion list</p>
+                )}
             </div>
         </div>
     );

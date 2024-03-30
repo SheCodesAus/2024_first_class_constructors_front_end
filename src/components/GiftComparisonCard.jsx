@@ -31,7 +31,11 @@ function GiftComparisonCard(props) {
         <p className="text-primary-100 tracking-wider mt-2">
           {giftData.description}
         </p>
-        <button className="flex justify-center border rounded-md bg-white border-primary-200 text-primary-200 hover:bg-primary-200 hover:text-white font-montserrat text-h3 uppercase text-center my-2 w-full p-4 backdrop:tracking-wider">
+        <button className="flex justify-center border rounded-md bg-white border-primary-200 text-primary-200 hover:bg-primary-200 hover:text-white font-montserrat text-h3 uppercase text-center my-2 w-full p-4 backdrop:tracking-wider"
+        onClick={() => {
+          alert('You will be redirected to the purchase page.');
+          window.open(giftData.source_url, '_blank');
+        }}>
           BUY ITEM HERE
         </button>
         <button className="flex justify-center border rounded-md bg-white border-primary-200 text-primary-200 hover:bg-primary-200 hover:text-white font-montserrat text-h3 uppercase text-center my-2 w-full p-4 backdrop:tracking-wider">
