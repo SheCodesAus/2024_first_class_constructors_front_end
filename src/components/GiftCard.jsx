@@ -31,8 +31,8 @@ function GiftCard(props) {
   };
 
   return (
-    <div className="w-full p-4 flex flex-col">
-      <div>
+    <div className="h-[32rem] w-full p-4 flex flex-col space-y-4">
+      <div className="">
         <Link to={`/gift/${giftData.id}`}>
           <div
             className="rounded-md relative overflow-hidden bg-white border-[1px]  border-primary-600 border-opacity-80"
@@ -47,7 +47,7 @@ function GiftCard(props) {
         </Link>
       </div>
       <div className="my-3 space-y-2">
-        <h3 className="font-montserrat text-primary-100 text-h3 tracking-wider uppercase">
+        <h3 className="font-montserrat text-primary-100 text-h3 tracking-wider uppercase line-clamp-2">
           {giftData.name}
         </h3>
         <h3 className="font-montserrat  text-primary-100  text-[22px] tracking-wider">
