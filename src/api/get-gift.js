@@ -1,6 +1,6 @@
 async function getGift() {
 
-    const url =`${import.meta.env.VITE_API_URL}/gifts/id`;
+    const url =`${import.meta.env.VITE_API_URL}/gifts/${projectId}`;
 
     const response =await fetch(url,{method:"GET"});
     
