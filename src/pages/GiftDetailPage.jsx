@@ -32,8 +32,8 @@ function GiftDetailPage() {
   };
 
   return (
-    <div className="flex justify-center items-center m-4 md:m-12" >
-      <div className="max-w-screen-md w-full">
+    <div className="flex justify-center items-center m-4 md:m-12 " >
+      <div className="max-w-screen-xl w-full">
         <div className="bg-[url('src/assets/Images/pexels-photo-6331088.jpeg')] bg-cover bg-center flex justify-center items-center h-full">
           <div className="bg-primary-500 px-6 my-8 md:my-14 md:px-10 lg:px-20">
             <h1 className="font-fredoka text-slate-100 text-2xl md:text-4xl text-center tracking-wider uppercase">
@@ -43,9 +43,9 @@ function GiftDetailPage() {
         </div>
     
 
-        <div className="p-6 md:p-20 mb-12 mt-6 md:mt-12 flex flex-col md:flex-row  w-full h-full bg-pink-400 bg-opacity-10 rounded-md overflow-hidden shadow-lg border border-primary-600 border-opacity-80">
+        <div className="p-4 md:p-8 mt-6 md:mt-12 flex flex-col md:flex-row  w-full h-full bg-pink-400 bg-opacity-10 rounded-md overflow-hidden shadow-lg border border-primary-600 border-opacity-80">
           {/* image */}
-          <div className="w-full md:w-1/2 flex justify-center md:justify-start">
+          <div className="w-full p-4 md:p-8 md:w-1/2 flex justify-center md:justify-start">
             <img
               src={giftData.img}
               alt={giftData.name}
@@ -56,30 +56,28 @@ function GiftDetailPage() {
           <div className="w-full md:w-1/2 flex flex-col justify-between p-4 md:p-8">
             {/* text */}
             <div>
-              <h3 className="font-fredoka text-primary-100 text-2xl md:text-3xl tracking-wider uppercase font-semibold mt-2">
+              <h3 className="font-fredoka text-primary-100 text-xl md:text-3xl tracking-wider uppercase ">
                 {giftData.name}
               </h3>
-              <p className="font-montserrat text-primary-100 text-lg md:text-xl tracking-wider uppercase mt-4">
+              <p className="font-montserrat text-primary-100  text-base md:text-xl tracking-wider uppercase mt-8">
                 {giftData.description}
               </p>
-              <h3 className="font-montserrat text-primary-100 text-xl md:text-2xl tracking-wider mt-4">
+              <h3 className="font-montserrat text-primary-100 text-lg md:text-2xl tracking-wider mt-8">
                 {giftData.price}
               </h3>
             </div>
 
             {/* buttons */}
-           
 
-             
-                <CompareButton
+            <div flex>
+                <CompareButton 
                   onClick={handleAddGift}
-                 
                 />
              
            
-              <Link to={giftData.source_url} className="mb-4 md:mb-0 md:mr-4">
+              <Link to={giftData.source_url} >
                 <button
-                  className="flex justify-center bg-white border rounded-md border-primary-200 text-primary-200 hover:bg-primary-200 hover:text-white  font-montserrat text-h4 uppercase text-center my-2 w-full p-4 backdrop:tracking-wider">
+                  className="flex justify-center bg-white border rounded-md border-primary-200 text-primary-200 hover:bg-primary-200 hover:text-white  font-montserrat text-h4 uppercase text-center my-2 mt-5 w-full p-4 backdrop:tracking-wider">
                   BUY ITEM HERE
                 </button>
               </Link>
@@ -88,7 +86,7 @@ function GiftDetailPage() {
           </div>
         </div>
       </div>
-  
+      </div>
   
   );
 }
