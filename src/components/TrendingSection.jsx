@@ -6,6 +6,7 @@ import useFeaturedGifts from "../hooks/use-featured-gifts.js"
 function TrendingSection() {
   const { featuredGifts, isLoading, error } = useFeaturedGifts();
 
+
   return (
     <div className="flex flex-col justify-center align-center space-y-10">
       <div className="bg-[url('src/assets/Images/photo-1513151233558-d860c5398176.jpeg')] bg-cover bg-center flex justify-center items-center h-full">

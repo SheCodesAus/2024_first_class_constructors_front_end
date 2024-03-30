@@ -16,12 +16,9 @@ export default function useFeaturedGifts() {
                     setFeaturedGifts(featured);
                 }
             })
-
-            .catch((error) => {
-                setError(error);
-                setIsLoading(false);
-            });
-    });
+            .catch((error) => setError(error))
+            .finally(() => setIsLoading(false));
+    }, [featuredGifts]);
 
 
     return { featuredGifts, isLoading, error };
