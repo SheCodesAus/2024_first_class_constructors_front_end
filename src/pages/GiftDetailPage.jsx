@@ -8,13 +8,14 @@ function GiftDetailPage() {
   const { gift, isLoading, error } = useGift(id);
   
   if (isLoading) {
-    return <p>Loading...</p>; // Render loading state if data is being fetched
+    return <p>Loading...</p>;
   }
 
   if (error || !gift) {
     return <p>Sorry, we couldn't find the gift you're looking for </p>;
   }
 
+  //leaving in comments for this section for others to understand.
   const handleAddGift = () => {
     
     const existingGifts = JSON.parse(localStorage.getItem("gifts")) || []; // Retrieve existing gifts from localStorage or initialize as an empty array

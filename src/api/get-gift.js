@@ -2,7 +2,7 @@ async function getGift(giftId) {
 
     const url =`${import.meta.env.VITE_API_URL}/gifts/${giftId}`;
 
-    const response =await fetch(url,{method:"GET"});
+    const response = await fetch (url,{method:"GET"});
     
     if (!response.ok) {
         const fallbackError =`Error fetching gift with id ${giftId}`;
@@ -11,7 +11,7 @@ async function getGift(giftId) {
             throw new Error(fallbackError);
         });
 
-        const errorMessage = data?.detail?? fallbackError;
+        const errorMessage = data ?.detail ?? fallbackError;
         throw new Error(errorMessage);
     }
 
