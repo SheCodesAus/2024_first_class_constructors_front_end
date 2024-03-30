@@ -1,4 +1,4 @@
-async function getGift() {
+async function getGift(giftId) {
 
     const url =`${import.meta.env.VITE_API_URL}/gifts/${giftId}`;
 
@@ -19,3 +19,4 @@ async function getGift() {
 }
 
 export default getGift;
+
