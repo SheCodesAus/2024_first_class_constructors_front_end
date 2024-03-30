@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import useGift from "../hooks/use-gift";
 import CompareButton from "../components/CompareButton.jsx";
+import { Link } from "react-router-dom";
 
 function GiftDetailPage() {
   const { id } = useParams(); 
@@ -39,47 +40,52 @@ function GiftDetailPage() {
   }; //AS: Can do more clean up on this function
 
   return (
-    <div className="flex justify-center items-center m-12">
-      <div className="w-300">
-        <div className="bg-[url('src/assets/Images/pexels-photo-6331088.jpeg')] bg-cover bg-center flex justify-center items-center h-full">
-          <div className="bg-primary-500 px-6 my-14 md:mx-40 md:px-10 lg:px-20">
-            <h1 className="font-fredoka text-slate-100 text-h1 text-center tracking-wider uppercase px-1">
-              HAPPY SHOPPING
-            </h1>
-          </div>
+    <div className="flex flex-col justify-center align-center space-y-14 m-12 ">
+      <div className="bg-[url('src/assets/Images/pexels-photo-6331088.jpeg')] bg-cover bg-center flex justify-center items-center h-full">
+        <div className="bg-primary-500 px-6 my-14 md:my-14 md:px-10 lg:px-20">
+          <h1 className="font-fredoka text-slate-100 text-h1 md:text-4xl text-center tracking-wider uppercase">
+            HAPPY SHOPPING
+          </h1>
         </div>
-        <div className="flex mt-20 max-w-[1000px]">
-          <div className="p-20 mb-12 flex flex-row justify-start items-start w-full h-full bg-pink-400 bg-opacity-10 rounded-md overflow-hidden shadow-lg border border-primary-600 border-opacity-80">
-            <div className="flex-shrink-0 w-2/5">
-              <img
-                src={gift.img}
-                alt={gift.name}
-                className="object-cover  rounded-md overflow-hidden shadow-lg border border-primary-600 border-opacity-80"
-              />
-            </div>
+      </div>
 
-            <div className="w-full md:w-3/5 flex flex-col m-12 justify-between">
-              <div>
-                <h3 className="font-fredoka text-primary-100 text-h1 tracking-wider uppercase font-semibold mt-2">
-                  {gift.name}
-                </h3>
-                <p className="font-montserrat text-primary-100 text-h2 tracking-wider uppercase  mt-2">
-                  {gift.description}
-                </p>
-                <h3 className="font-montserrat text-primary-100 text-[22px] tracking-wider mt-3">
-                  {gift.price}
-                </h3>
-              </div>
+      <div className="m-4 p-4 flex lg:mx-24 lg:py-10 lg:px-20 flex-col justify-center h-full bg-pink-400 bg-opacity-10 rounded-md overflow-hidden shadow-lg border border-primary-600 border-opacity-80">
+        {/* image */}
+        <div className="w-full p-4 md:p-10 flex flex-col justify-center">
+          <imgs
+            src={gift.img}
+            alt={gift.name}
+            className="lg:max-h-[60rem] md:max-h-[40rem] lg:p-18 md:p-14 p-10 object-cover rounded-md overflow-hidden shadow-lg  bg-slate-50 border border-primary-600 border-opacity-80"
+          />
+        </div>
 
-              <div className=" mt-auto">
-                <div>
-                  <CompareButton onClick={handleAddGift} />
-                </div>
-                <button className="flex justify-center border rounded-md bg-white border-primary-200 text-primary-200 hover:bg-primary-200 hover:text-white font-montserrat text-h3 uppercase text-center my-2 w-full p-4 backdrop:tracking-wider">
-                  BUY ITEM HERE
-                </button>
-              </div>
-            </div>
+        <div className="w-full flex flex-col justify-between p-4 md:p-10">
+          {/* text */}
+          <div className="space-y-6 mb-6">
+            <h3 className="font-fredoka text-primary-100 text-h2 tracking-wider uppercase ">
+              {gift.name}
+            </h3>
+            <p className="font-montserrat text-primary-100  text-p tracking-wider uppercase">
+              {gift.description}
+            </p>
+            <h3 className="font-montserrat text-primary-100 text-[22px] tracking-wider">
+              {gift.price}
+            </h3>
+          </div>
+
+          {/* buttons */}
+
+          <div>
+
+            <CompareButton onClick={handleAddGift} />
+
+            
+
+            <Link to={gift.source_url}>
+              <button className="flex justify-center bg-white border rounded-md border-primary-200 text-primary-200 hover:bg-primary-200 hover:text-white  font-montserrat text-h4 uppercase text-center my-5 w-full p-4 backdrop:tracking-wider">
+                BUY ITEM HERE
+              </button>
+            </Link>
           </div>
         </div>
       </div>
