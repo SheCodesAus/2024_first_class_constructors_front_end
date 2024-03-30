@@ -11,14 +11,11 @@ export default function useFeaturedGifts() {
         getFeaturedGifts()
             .then((featured) => {
                 featured = featured.slice(0, 3);
-                if (featuredGifts.length !== featured.length ||
-                    featuredGifts.some((element, index) => element.id !== featured[index].id)) {
-                    setFeaturedGifts(featured);
-                }
+                setFeaturedGifts(featured);
             })
             .catch((error) => setError(error))
             .finally(() => setIsLoading(false));
-    }, [featuredGifts]);
+    }, []);
 
 
     return { featuredGifts, isLoading, error };
