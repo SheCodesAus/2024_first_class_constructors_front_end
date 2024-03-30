@@ -6,7 +6,7 @@ import { allGifts } from "../data";
 
 function GiftDetailPage() {
   const { id } = useParams();
-  const giftData = allGifts.find((g) => g.id === parseInt(id));
+  const giftData = allGifts.find((gift) => gift.id === parseInt(id));
 
   if (!giftData) {
     return <p>Gift not found for ID: {id}</p>;
@@ -44,10 +44,10 @@ function GiftDetailPage() {
       <div className="m-4 p-4 flex lg:mx-24 lg:py-10 lg:px-20 flex-col justify-center h-full bg-pink-400 bg-opacity-10 rounded-md overflow-hidden shadow-lg border border-primary-600 border-opacity-80">
         {/* image */}
         <div className="w-full p-4 md:p-10 flex flex-col justify-center">
-          <img
+          <imgs
             src={giftData.img}
             alt={giftData.name}
-            className=" md:max-h-[35rem]  object-cover rounded-md overflow-hidden shadow-lg border border-primary-600 border-opacity-80"
+            className="lg:max-h-[60rem] md:max-h-[40rem] lg:p-18 md:p-14 p-10 object-cover rounded-md overflow-hidden shadow-lg  bg-slate-50 border border-primary-600 border-opacity-80"
           />
         </div>
 
