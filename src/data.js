@@ -227,12 +227,12 @@ export const allGifts= [
     },
     {
         "id": 20,
-        "name": "Taittinger & Friends Rosé Champagne Gift Pack",
-        "description": "This pack includes Rosé cult favourites Sadi Malot Rosé de Saignée 2018 and Charles Collin Brut Rosé, led by one of France's most revered Maisons, Taittinger Brut Réserve Rosé.",
-        "price": "289.00",
-        "img": "https://emperorchampagne.com.au/cdn/shop/products/Rose-Gift-Pack-OutBox.jpg?v=1680563256",
+        "name": "Happy Birthday Signature Frame",
+        "description": "Create a wonderful personalised birthday photo frame gift filled with messages with this Happy Birthday Signature Frame.",
+        "price": "29.00",
+        "img": "https://www.giftsaustralia.com.au/assets/full/SIGOHB.jpg",
         "is_featured": false,
-        "source_url": "https://emperorchampagne.com.au/collections/gift-packs/products/taittinger-friends-rose-champagne-gift-pack",
+        "source_url": "https://www.giftsaustralia.com.au/happy-birthday-signature-photo-frame",
         "categories": [1, 3, 4, 5]
     }
 ];
