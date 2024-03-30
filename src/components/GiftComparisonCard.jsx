@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import CompareButton from "./CompareButton";
+import RemoveButton from "./RemoveButton";
 
 function GiftComparisonCard(props) {
   const { giftData } = props;
@@ -38,9 +38,7 @@ function GiftComparisonCard(props) {
         }}>
           BUY ITEM HERE
         </button>
-        <button className="flex justify-center border rounded-md bg-white border-primary-200 text-primary-200 hover:bg-primary-200 hover:text-white font-montserrat text-h3 uppercase text-center my-2 w-full p-4 backdrop:tracking-wider">
-          REMOVE
-        </button>
+        <RemoveButton giftData={giftData} />
       </div>
     </div>
   );
