@@ -32,62 +32,56 @@ function GiftDetailPage() {
   };
 
   return (
-    <div className="flex justify-center items-center m-4 md:m-12 " >
-      <div className="max-w-screen-xl w-full">
-        <div className="bg-[url('src/assets/Images/pexels-photo-6331088.jpeg')] bg-cover bg-center flex justify-center items-center h-full">
-          <div className="bg-primary-500 px-6 my-8 md:my-14 md:px-10 lg:px-20">
-            <h1 className="font-fredoka text-slate-100 text-2xl md:text-4xl text-center tracking-wider uppercase">
-              HAPPY SHOPPING
-            </h1>
-          </div>
+    <div className="flex flex-col justify-center align-center space-y-14 m-12 ">
+      <div className="bg-[url('src/assets/Images/pexels-photo-6331088.jpeg')] bg-cover bg-center flex justify-center items-center h-full">
+        <div className="bg-primary-500 px-6 my-14 md:my-14 md:px-10 lg:px-20">
+          <h1 className="font-fredoka text-slate-100 text-h1 md:text-4xl text-center tracking-wider uppercase">
+            HAPPY SHOPPING
+          </h1>
         </div>
-    
+      </div>
 
-        <div className="p-4 md:p-8 mt-6 md:mt-12 flex flex-col md:flex-row  w-full h-full bg-pink-400 bg-opacity-10 rounded-md overflow-hidden shadow-lg border border-primary-600 border-opacity-80">
-          {/* image */}
-          <div className="w-full p-4 md:p-8 md:w-1/2 flex justify-center md:justify-start">
-            <img
-              src={giftData.img}
-              alt={giftData.name}
-              className="object-cover rounded-md overflow-hidden shadow-lg border border-primary-600 border-opacity-80 w-full h-auto md:h-full md:w-auto"
-            />
+      <div className="m-4 p-4 flex lg:mx-24 lg:py-10 lg:px-20 flex-col justify-center h-full bg-pink-400 bg-opacity-10 rounded-md overflow-hidden shadow-lg border border-primary-600 border-opacity-80">
+        {/* image */}
+        <div className="w-full p-4 md:p-10 flex flex-col justify-center">
+          <img
+            src={giftData.img}
+            alt={giftData.name}
+            className=" md:max-h-[35rem]  object-cover rounded-md overflow-hidden shadow-lg border border-primary-600 border-opacity-80"
+          />
+        </div>
+
+        <div className="w-full flex flex-col justify-between p-4 md:p-10">
+          {/* text */}
+          <div className="space-y-6 mb-6">
+            <h3 className="font-fredoka text-primary-100 text-h2 tracking-wider uppercase ">
+              {giftData.name}
+            </h3>
+            <p className="font-montserrat text-primary-100  text-p tracking-wider uppercase">
+              {giftData.description}
+            </p>
+            <h3 className="font-montserrat text-primary-100 text-[22px] tracking-wider">
+              {giftData.price}
+            </h3>
           </div>
 
-          <div className="w-full md:w-1/2 flex flex-col justify-between p-4 md:p-8">
-            {/* text */}
-            <div>
-              <h3 className="font-fredoka text-primary-100 text-xl md:text-3xl tracking-wider uppercase ">
-                {giftData.name}
-              </h3>
-              <p className="font-montserrat text-primary-100  text-base md:text-xl tracking-wider uppercase mt-8">
-                {giftData.description}
-              </p>
-              <h3 className="font-montserrat text-primary-100 text-lg md:text-2xl tracking-wider mt-8">
-                {giftData.price}
-              </h3>
-            </div>
+          {/* buttons */}
 
-            {/* buttons */}
+          <div>
 
-            <div flex>
-                <CompareButton 
-                  onClick={handleAddGift}
-                />
-             
-           
-              <Link to={giftData.source_url} >
-                <button
-                  className="flex justify-center bg-white border rounded-md border-primary-200 text-primary-200 hover:bg-primary-200 hover:text-white  font-montserrat text-h4 uppercase text-center my-2 mt-5 w-full p-4 backdrop:tracking-wider">
-                  BUY ITEM HERE
-                </button>
-              </Link>
+            <CompareButton onClick={handleAddGift} />
 
-            </div>
+            
+
+            <Link to={giftData.source_url}>
+              <button className="flex justify-center bg-white border rounded-md border-primary-200 text-primary-200 hover:bg-primary-200 hover:text-white  font-montserrat text-h4 uppercase text-center my-5 w-full p-4 backdrop:tracking-wider">
+                BUY ITEM HERE
+              </button>
+            </Link>
           </div>
         </div>
       </div>
-      </div>
-  
+    </div>
   );
 }
 
