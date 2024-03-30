@@ -1,6 +1,8 @@
+import React from "react";
 import useGift from "../hooks/use-gift";
 import CompareButton from "../components/CompareButton.jsx";
 import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 function GiftDetailPage() {
   const { id } = useParams(); 
@@ -20,6 +22,9 @@ function GiftDetailPage() {
     const existingGifts = JSON.parse(localStorage.getItem("gifts")) || []; // Retrieve existing gifts from localStorage or initialize as an empty array
 
     if (existingGifts.some(existingGift => existingGift.id === gift.id)) { // Check if the gift already exists in the array
+      alert("This gift is already in the compare list!");
+      return;
+    }
 
     if (existingGifts.length >= 4) { // Check if there are already 4 gifts in the array
       alert("You can only compare up to 4 gifts!");
@@ -47,7 +52,7 @@ function GiftDetailPage() {
       <div className="m-4 p-4 flex lg:mx-24 lg:py-10 lg:px-20 flex-col justify-center h-full bg-pink-400 bg-opacity-10 rounded-md overflow-hidden shadow-lg border border-primary-600 border-opacity-80">
         {/* image */}
         <div className="w-full p-4 md:p-10 flex flex-col justify-center">
-          <imgs
+          <img
             src={gift.img}
             alt={gift.name}
 
@@ -59,7 +64,6 @@ function GiftDetailPage() {
           {/* text */}
           <div className="space-y-6 mb-6">
             <h3 className="font-fredoka text-primary-100 text-h2 tracking-wider uppercase ">
-
               {gift.name}
             </h3>
             <p className="font-montserrat text-primary-100  text-p tracking-wider uppercase">
@@ -85,7 +89,7 @@ function GiftDetailPage() {
         </div>
       </div>
     </div>
-  );
-}
+  );}
+
 
 export default GiftDetailPage;
