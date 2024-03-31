@@ -2,14 +2,13 @@ import { useState, useEffect } from "react";
 
 import getGift from "../api/get-gift";
 
-export default function useGift() {
+export default function useGift(giftId) {
     const [gift, setGift] = useState();
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState();
 
-
     useEffect(() => {
-        getGift(gift.id)
+        getGift(giftId)
             .then((gift) => {
                 setGift(gift);
                 setIsLoading(false);
@@ -19,7 +18,7 @@ export default function useGift() {
                 setError(error);
                 setIsLoading(false);
             });
-    }, [gift.id]);
+        }, [giftId]);
 
 
     return { gift, isLoading, error };

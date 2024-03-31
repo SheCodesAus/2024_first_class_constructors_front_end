@@ -1,19 +1,24 @@
 import React from "react";
-// import { useState, useEffect } from 'react';
-// import useGifts from "../hooks/use-gifts";
-
-import { allGifts } from "../data";
+import { useState, useEffect } from 'react';
+import useGifts from "../hooks/use-gifts";
 
 import GiftCard from "../components/GiftCard";
 
 function ChristmasPage() {
-  // const { gifts, isLoading, error } = useGifts();
+  const { gifts, isLoading, error } = useGifts();
   // const [errorMessage, setErrorMessage] = useState(null);
 
-  // Get the last 4 latest gifts as featured for now - TO BE UPDATED FEATURED TIME!
-  const ChristmasGifts = allGifts.filter((gift) =>
+  const ChristmasGifts = gifts.filter((gift) =>
     gift.categories.includes(5)
   );
+
+  if (isLoading) {
+    return (<p>Loading</p>)
+  }
+
+  if (error) {
+      return (<p>{error.message}</p>)
+  }
 
   return (
     <div className="flex flex-col justify-center align-center space-y-8 m-12">
@@ -24,6 +29,7 @@ function ChristmasPage() {
           </h1>
         </div>
       </div>
+
       <div className="flex flex-wrap md:mx-6 lg:mx-20">
         {ChristmasGifts.map((giftData) => (
           <div key={giftData.id} className="w-full sm:w-1/2 md:w-1/3">
