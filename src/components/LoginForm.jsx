@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import postLogin from "../api/post-login.js";
-import useAuth from "../hooks/use-auth.js";
+import { useAuth } from "../hooks/use-auth.js";
 
 
 function LoginForm() {
     const navigate = useNavigate();
-    const { auth, setAuth } = useAuth();
+    const {setAuth} = useAuth();
 
     const [credentials, setCredentials] = useState({
         username: "",
@@ -35,6 +35,7 @@ function LoginForm() {
                 credentials.password
             ).then((response) => {
                 window.localStorage.setItem("token", response.token);
+                window.localStorage.setItem("id", response.user_id);
                 setAuth({
                     token: response.token,
                     userId: response.user_id,
@@ -46,8 +47,7 @@ function LoginForm() {
     };
 
     return (
-        <div id='login-form-container'>
-            <form id='login-form' onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="username">Username: </label>
                     <input
@@ -66,11 +66,11 @@ function LoginForm() {
                         onChange={handleChange}
                     />
                 </div>
-                <button type="submit" id="login-button">
+                <button 
+                    type="submit">
                     Login
                 </button>
             </form>
-        </div>
     );
 }
 
