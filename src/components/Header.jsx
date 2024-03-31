@@ -12,11 +12,11 @@ function Header() {
             alt="Gift Compare Icon"
             className="w-auto h-6"
           />
-          <img
+          <Link to="/login"><img
             src="src/assets/Images/SignInIconVector.svg"
             alt="Sign In Compare Icon"
             className="w-auto h-6"
-          />
+          /></Link>
         </div>
       </div>
       <div className="m-4 flex flex-col items-center">
