@@ -1,18 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
-// import { useState, useEffect } from 'react';
-// import useGifts from "../hooks/use-gifts";
-
-import { allGifts } from "../data";
-
+import { useState, useEffect } from 'react';
 import GiftCard from "./GiftCard";
+import useFeaturedGifts from "../hooks/use-featured-gifts.js"
 
 function TrendingSection() {
-  // const { gifts, isLoading, error } = useGifts();
-  // const [errorMessage, setErrorMessage] = useState(null);
+  const { featuredGifts, isLoading, error } = useFeaturedGifts();
 
-  // Get the last 4 latest gifts as featured for now - TO BE UPDATED FEATURED TIME!
-  const TrendingGifts = allGifts.slice(1, 4);
 
   return (
     <div className="flex flex-col justify-center align-center space-y-10">
@@ -24,7 +17,7 @@ function TrendingSection() {
         </div>
       </div>
       <div className="flex flex-wrap md:mx-6 lg:mx-20">
-        {TrendingGifts.map((giftData) => (
+        {featuredGifts.map((giftData) => (
           <div key={giftData.id} className="w-full sm:w-1/2 md:w-1/3">
             <GiftCard giftData={giftData} />
           </div>

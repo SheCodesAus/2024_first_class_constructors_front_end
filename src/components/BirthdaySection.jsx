@@ -1,23 +1,25 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import { useState, useEffect } from 'react';
-// import useGifts from "../hooks/use-gifts";
-
-import { allGifts } from "../data";
+import { useState, useEffect } from 'react';
+import useGifts from "../hooks/use-gifts";
 
 import GiftCard from "./GiftCard";
 
 function BirthdaySection() {
-  // const { gifts, isLoading, error } = useGifts();
+  const { gifts, isLoading, error } = useGifts();
   // const [errorMessage, setErrorMessage] = useState(null);
 
-  // using .concat to show images suited to category. CHANGE LATER
-  const BirthdayGifts = allGifts
-    .filter((gift) => gift.categories.includes(1))
-    .slice(0, 1)
-    .concat(allGifts.filter((gift) => gift.categories.includes(1)).slice(2, 3))
-    .concat(allGifts.filter((gift) => gift.categories.includes(1)).slice(4, 5));
+  const BirthdayGifts = gifts
+    .filter((gift) => gift.categories.includes(1)).slice(0, 3)  
 
+  if (isLoading) {
+    return (<p>Loading</p>)
+  }
+
+  if (error) {
+      return (<p>{error.message}</p>)
+  }
+  
   return (
     <div className="flex flex-col justify-center align-center space-y-10">
       <Link to="/BirthdayPage">

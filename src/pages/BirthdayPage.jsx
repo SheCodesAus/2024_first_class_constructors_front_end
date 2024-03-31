@@ -1,20 +1,25 @@
 import React from "react";
-// import { useState, useEffect } from 'react';
-// import useGifts from "../hooks/use-gifts";
-
-import { allGifts } from "../data";
+import { useState, useEffect } from 'react';
+import useGifts from "../hooks/use-gifts";
 
 import GiftCard from "../components/GiftCard";
 
 function BirthdayPage() {
-  // const { gifts, isLoading, error } = useGifts();
+  const { gifts, isLoading, error } = useGifts();
   // const [errorMessage, setErrorMessage] = useState(null);
 
-  // Get the last 4 latest gifts as featured for now - TO BE UPDATED FEATURED TIME!
-  const BirthdayGifts = allGifts.filter((gift) =>
+  const BirthdayGifts = gifts.filter((gift) =>
     gift.categories.includes(1)
   );
 
+  if (isLoading) {
+    return (<p>Loading</p>)
+  }
+
+  if (error) {
+      return (<p>{error.message}</p>)
+  }
+  
   return (
     <div className="flex flex-col justify-center align-center space-y-8 m-12">
       <div className="bg-[url('src/assets/Images/pexels-photo-796605.webp')] bg-cover bg-center flex justify-center items-center h-full">
@@ -24,8 +29,9 @@ function BirthdayPage() {
           </h1>
         </div>
       </div>
+      
       <div className="flex flex-wrap md:mx-6 lg:mx-20">
-        {BirthdayGifts.map((giftData) => (
+      {BirthdayGifts.map((giftData) => (
           <div key={giftData.id} className="w-full sm:w-1/2 md:w-1/3">
             <GiftCard giftData={giftData} />
           </div>
