@@ -42,10 +42,10 @@ function Comparison() {
 
         <div className="m-4 p-4 flex lg:mx-24 lg:py-10 lg:px-20 flex-col justify-center h-full bg-primary-600 bg-opacity-20 rounded-md overflow-hidden shadow-lg border border-primary-600 border-opacity-80">
            
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4 ">
     {gifts.length >= 1 ? (
         gifts.map((gift) => (
-            <div key={gift.id} className="  ">
+            <div key={gift.id} className=" ">
                 <GiftComparisonCard giftData={gift} />
             </div>
         ))
