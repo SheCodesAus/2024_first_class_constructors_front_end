@@ -12,9 +12,13 @@ import App from "./app.jsx";
 import WeddingPage from "./pages/WeddingPage.jsx";
 import GraduationPage from "./pages/GraduationPage.jsx";
 import ChristmasPage from "./pages/ChristmasPage.jsx";
+<<<<<<< HEAD
 import LoginPage from "./pages/LoginPage.jsx";
 import { AuthProvider } from "./components/AuthProvider.jsx";
 
+=======
+import ComparePage from "./pages/ComparePage.jsx";
+>>>>>>> dev
 
 const router = createBrowserRouter([
   {
@@ -22,7 +26,11 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       { path: "/", element: <HomePage /> },
+<<<<<<< HEAD
       { path: "/login", element: <LoginPage /> },
+=======
+      { path: "compare", element: <ComparePage />},
+>>>>>>> dev
       { path: "BirthdayPage", element: <BirthdayPage /> },
       { path: "AnniversaryPage", element: <AnniversaryPage /> },
       { path: "WeddingPage", element: <WeddingPage /> },
