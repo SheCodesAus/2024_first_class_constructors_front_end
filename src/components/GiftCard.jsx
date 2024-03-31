@@ -10,16 +10,16 @@ function GiftCard(props) {
     const existingGifts = JSON.parse(localStorage.getItem("gifts")) || [];
 
     // Check if the gift already exists in the array
-    if (existingGifts.some(gift => gift.id === giftData.id)) {
+    if (existingGifts.some((gift) => gift.id === giftData.id)) {
       alert("This gift is already in the compare list!");
       return;
     }
 
-      // Check if there are already 4 gifts in the array
-  if (existingGifts.length >= 4) {
-    alert("You can only compare up to 4 gifts!");
-    return;
-  }
+    // Check if there are already 4 gifts in the array
+    if (existingGifts.length >= 4) {
+      alert("You can only compare up to 4 gifts!");
+      return;
+    }
     // Add the current giftData to the existing gifts array
     const updatedGifts = [...existingGifts, giftData];
 
@@ -27,11 +27,11 @@ function GiftCard(props) {
     localStorage.setItem("gifts", JSON.stringify(updatedGifts));
 
     alert("Gift added to compare list!");
-    console.log(updatedGifts)
+    console.log(updatedGifts);
   };
 
   return (
-    <div className="h-[32rem] w-full p-4 flex flex-col space-y-4">
+    <div className="w-full p-4 flex flex-col space-y-4">
       <div className="">
         <Link to={`/gift/${giftData.id}`}>
           <div
@@ -46,14 +46,16 @@ function GiftCard(props) {
           </div>
         </Link>
       </div>
-      <div className="my-3 space-y-2">
+
+      <div className="my-3 space-y-2 min-h-14">
         <h3 className="font-montserrat text-primary-100 text-h3 tracking-wider uppercase line-clamp-2">
           {giftData.name}
         </h3>
-        <h3 className="font-montserrat  text-primary-100  text-[22px] tracking-wider">
-          {giftData.price}
-        </h3>
       </div>
+      <h3 className="font-montserrat  text-primary-100  text-[22px] tracking-wider">
+        {giftData.price}
+      </h3>
+
       <div>
         <CompareButton onClick={handleAddGift} />
       </div>
