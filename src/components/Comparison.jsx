@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from 'react';
@@ -41,13 +42,18 @@ function Comparison() {
 
         <div className="m-4 p-4 flex lg:mx-24 lg:py-10 lg:px-20 flex-col justify-center h-full bg-primary-600 bg-opacity-20 rounded-md overflow-hidden shadow-lg border border-primary-600 border-opacity-80">
            
-            <div className="  flex flex-col justify-center ">
-                {gifts.length >= 2 ? (
-                    gifts.map((gift) => <GiftComparisonCard giftData={gift} />)
-                ) : (
-                    <p>Add gifts to your comparsion list</p>
-                )}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 ">
+    {gifts.length >= 1 ? (
+        gifts.map((gift) => (
+            <div key={gift.id} className="  ">
+                <GiftComparisonCard giftData={gift} />
             </div>
+        ))
+    ) : (
+        <p>Add gifts to your comparison list</p>
+    )}
+</div>
+
         </div>
         </div>
     );
