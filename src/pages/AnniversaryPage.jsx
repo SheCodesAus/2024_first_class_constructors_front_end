@@ -17,7 +17,7 @@ function AnniversaryPage() {
 
   return (
     <div className="flex flex-col justify-center align-center space-y-8 m-12">
-      <div className="bg-[url('src/assets/Images/iStock-1825131978.jpg')] bg-cover bg-center flex justify-center items-center h-full">
+      <div className="bg-[url('src/assets/Images/iStock-1825131978L.jpg')] bg-cover bg-center flex justify-center items-center h-full">
         <div className="bg-primary-600 px-6 my-14 md:mx-40 md:px-10 lg:px-20">
         <h1 className="font-fredoka text-primary-200 text-h1 text-center tracking-wider uppercase px-1">
           Anniversary
