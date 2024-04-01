@@ -9,13 +9,13 @@ function Header() {
         <div className="flex flex-row gap-4">
           <Link to="/compare">
             <img
-              src="src/assets/Images/GiftIconVector.svg"
+              src="/assets/Images/GiftIconVector.svg"
               alt="Gift Compare Icon"
               className="w-auto h-6"
             />
           </Link>
           <Link to="/login"><img
-            src="src/assets/Images/SignInIconVector.svg"
+            src="/assets/Images/SignInIconVector.svg"
             alt="Sign In Compare Icon"
             className="w-auto h-6"
           /></Link>
@@ -24,7 +24,7 @@ function Header() {
       <div className="m-4 flex flex-col items-center">
         <Link to="/">
           <img
-            src="src/assets/Images/GIFT_COMPARE_LOGO.svg"
+            src="/assets/Images/GIFT_COMPARE_LOGO.svg"
             alt="Gift Compare Logo"
             className="w-max-w-lg h-20"
           />
