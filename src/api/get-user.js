@@ -1,7 +1,12 @@
-async function getUser(userId) {
+async function getUser(userId, token) {
   const url = `${import.meta.env.VITE_API_URL}/users/${userId}`;
 
-  const response = await fetch(url, { method: "GET" });
+  const response = await fetch(url, { 
+    method: "GET", 
+    headers: {
+      Authorization: `Token ${token}`,
+    }, 
+  });
 
   if (!response.ok) {
     const fallbackError = `Error fetching user with id ${userId}`;

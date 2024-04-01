@@ -3,12 +3,11 @@ import useUser from "../hooks/use-user.js";
 import { AuthContext } from "./AuthProvider.jsx";
 
 function ProfileCard() {
-  const { auth } = useContext(AuthContext);
-  const userId = auth.userId;
-
-  // UseUser returns 3 things so we need to grab them all
-  const { user, isLoading, error } = useUser(userId);
-
+  const { auth } = useContext(AuthContext); //this accesses auth directly 
+  const userId = auth.id 
+  const token = auth.token
+  
+  const { user, isLoading, error } = useUser(userId, token);
   if (!userId) {
     return null;
   }

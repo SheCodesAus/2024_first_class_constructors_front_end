@@ -7,7 +7,9 @@ function Header() {
 
   const handleLogout = () => {
     window.localStorage.removeItem("token");
-    setAuth({ token: null });
+    window.localStorage.removeItem("id");
+    window.localStorage.removeItem("username");
+    setAuth({ token: null, id: null, username: null });
   };
 
   return (
