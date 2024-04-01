@@ -1,7 +1,6 @@
 import React from "react";
-import { useState, useEffect } from 'react';
 import useGifts from "../hooks/use-gifts";
-
+import IsLoading from "../components/IsLoading";
 import GiftCard from "../components/GiftCard";
 
 function GraduationPage() {
@@ -13,8 +12,7 @@ function GraduationPage() {
   );
 
   if (isLoading) {
-    return (<p>Loading</p>)
-  }
+    return <IsLoading/> }
 
   if (error) {
       return (<p>{error.message}</p>)

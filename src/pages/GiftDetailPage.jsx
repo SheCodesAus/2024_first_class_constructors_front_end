@@ -1,16 +1,16 @@
 import React from "react";
 import useGift from "../hooks/use-gift";
 import CompareButton from "../components/CompareButton.jsx";
-import { Link } from "react-router-dom";
-import { useParams } from "react-router-dom";
+import IsLoading from "../components/IsLoading";
+
+import { Link, useParams } from "react-router-dom";
 
 function GiftDetailPage() {
   const { id } = useParams(); 
   const { gift, isLoading, error } = useGift(id);
   
   if (isLoading) {
-    return <p>Loading...</p>;
-  }
+    return <IsLoading/> }
 
   if (error || !gift) {
     return <p>Sorry, we couldn't find the gift you're looking for </p>;

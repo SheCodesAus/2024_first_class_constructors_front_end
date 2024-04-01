@@ -1,8 +1,7 @@
 import React from "react";
-import { useState, useEffect } from 'react';
 import useGifts from "../hooks/use-gifts";
-
 import GiftCard from "../components/GiftCard";
+import IsLoading from "../components/IsLoading";
 
 function ChristmasPage() {
   const { gifts, isLoading, error } = useGifts();
@@ -13,8 +12,7 @@ function ChristmasPage() {
   );
 
   if (isLoading) {
-    return (<p>Loading</p>)
-  }
+    return <IsLoading/> }
 
   if (error) {
       return (<p>{error.message}</p>)

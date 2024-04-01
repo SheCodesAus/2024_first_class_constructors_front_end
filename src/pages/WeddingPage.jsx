@@ -1,8 +1,7 @@
 import React from "react";
-import { useState, useEffect } from 'react';
 import useGifts from "../hooks/use-gifts";
-
 import GiftCard from "../components/GiftCard";
+import IsLoading from "../components/IsLoading";
 
 function WeddingPage() {
   const { gifts, isLoading, error } = useGifts();
@@ -12,9 +11,8 @@ function WeddingPage() {
     gift.categories.includes(3)
   );
 
-    if (isLoading) {
-    return (<p>Loading</p>)
-  }
+  if (isLoading) {
+    return <IsLoading/> }
 
   if (error) {
       return (<p>{error.message}</p>)
