@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <div className="bg-primary-400 mt-6 relative">
-      <div className="p-0 flex flex-auto items-center relative">
+      <div className="flex flex-auto items-center relative">
         <img
           src="src/assets/Images/bow_asset1.png"
           alt="bow asset"

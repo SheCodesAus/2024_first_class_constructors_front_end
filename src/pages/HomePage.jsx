@@ -1,6 +1,5 @@
 import GiftCard from "../components/GiftCard";
-import { allGifts } from "../data";
-// import useGift from "../hooks/use-gift";
+import useGift from "../hooks/use-gift";
 
 // Import Home page components Trending, budget, Birthday, Anniversary
 import TrendingSection from "../components/TrendingSection";

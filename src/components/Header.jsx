@@ -7,16 +7,18 @@ function Header() {
       <div className="mx-4 flex flex-row justify-between">
         <h5 className="font-fredoka text-h5 text-primary-200">$ AUD</h5>
         <div className="flex flex-row gap-4">
-          <img
-            src="src/assets/Images/GiftIconVector.svg"
-            alt="Gift Compare Icon"
-            className="w-auto h-6"
-          />
-          <img
+          <Link to="/compare">
+            <img
+              src="src/assets/Images/GiftIconVector.svg"
+              alt="Gift Compare Icon"
+              className="w-auto h-6"
+            />
+          </Link>
+          <Link to="/login"><img
             src="src/assets/Images/SignInIconVector.svg"
             alt="Sign In Compare Icon"
             className="w-auto h-6"
-          />
+          /></Link>
         </div>
       </div>
       <div className="m-4 flex flex-col items-center">

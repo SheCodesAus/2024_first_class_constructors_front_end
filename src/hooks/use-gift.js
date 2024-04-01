@@ -1,26 +1,25 @@
-import{ useState, useEffect }from"react";
+import { useState, useEffect } from "react";
 
-import getGift from"../api/get-gift";
+import getGift from "../api/get-gift";
 
-export default function useGift() {
-    const [gift, setGift] =useState();
-    const [isLoading, setIsLoading] =useState(true);
-    const [error, setError] =useState();
+export default function useGift(giftId) {
+    const [gift, setGift] = useState();
+    const [isLoading, setIsLoading] = useState(true);
+    const [error, setError] = useState();
 
-
-    useEffect(() =>{
+    useEffect(() => {
         getGift(giftId)
-        .then((gift) =>{
-        setGift(gift);
-        setIsLoading(false);
-        })
+            .then((gift) => {
+                setGift(gift);
+                setIsLoading(false);
+            })
 
-        .catch((error) =>{
-            setError(error);
-            setIsLoading(false);
-        });
-    }, [giftId]);
-   
+            .catch((error) => {
+                setError(error);
+                setIsLoading(false);
+            });
+        }, [giftId]);
 
-    return{ gift, isLoading, error };
+
+    return { gift, isLoading, error };
 }
