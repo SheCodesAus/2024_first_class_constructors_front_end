@@ -12,6 +12,9 @@ import App from "./app.jsx";
 import WeddingPage from "./pages/WeddingPage.jsx";
 import GraduationPage from "./pages/GraduationPage.jsx";
 import ChristmasPage from "./pages/ChristmasPage.jsx";
+import ComparePage from "./pages/ComparePage.jsx";
+import LoginPage from "./pages/LoginPage.jsx";
+import { AuthProvider } from "./components/AuthProvider.jsx";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +22,8 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       { path: "/", element: <HomePage /> },
+      { path: "compare", element: <ComparePage />},
+      { path: "/login", element: <LoginPage /> },
       { path: "BirthdayPage", element: <BirthdayPage /> },
       { path: "AnniversaryPage", element: <AnniversaryPage /> },
       { path: "WeddingPage", element: <WeddingPage /> },
@@ -31,6 +36,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>
 );
