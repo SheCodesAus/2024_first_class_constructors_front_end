@@ -13,20 +13,10 @@ function Header() {
   };
 
   return (
-    <div className="mt-6">
+    <div className="mt-4">
       <div className="mx-4 flex flex-row justify-between">
         <h5 className="font-fredoka text-h5 text-primary-200">$ AUD</h5>
-        
-        {/* GIFT COMPARE LOGO */}
-        <div className="m-4 flex flex-col items-center">
-          <NavLink to="/">
-            <img
-              src="src/assets/Images/GIFT_COMPARE_LOGO.svg"
-              alt="Gift Compare Logo"
-              className="w-max-w-lg h-20"
-            />
-          </NavLink>
-        </div>
+
         <div className="flex flex-row space-x-3">
           {/* COMAPRE ICON */}
           <div className="flex flex-row gap-4">
@@ -53,7 +43,11 @@ function Header() {
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/" onClick={handleLogout} className="font-fredoka text-h5 decoration-slice text-primary-200 uppercase">
+                  <NavLink
+                    to="/"
+                    onClick={handleLogout}
+                    className="font-fredoka text-h5 decoration-slice text-primary-200 uppercase"
+                  >
                     Log Out
                   </NavLink>
                 </li>
@@ -72,6 +66,17 @@ function Header() {
             )}
           </nav>
         </div>
+      </div>
+
+      {/* GIFT COMPARE LOGO */}
+      <div className="mb-4 flex flex-col items-center">
+        <NavLink to="/">
+          <img
+            src="src/assets/Images/GIFT_COMPARE_LOGO.svg"
+            alt="Gift Compare Logo"
+            className="w-max-w-lg h-20"
+          />
+        </NavLink>
       </div>
 
       {/* GIFT COMPARE SLOGAN */}
