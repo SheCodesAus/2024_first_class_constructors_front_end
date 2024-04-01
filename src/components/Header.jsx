@@ -33,6 +33,7 @@ function Header() {
       <div className="px-6 flex flex-col items-center">
         <img
           src="src/assets/Images/A_ good_gift_makes_every_moment_happy.svg"
+             
           alt="A good gift"
           className="h-auto w-80 m-2"
         />
