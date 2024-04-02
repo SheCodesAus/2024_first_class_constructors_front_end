@@ -13,7 +13,8 @@ function BirthdaySection() {
     .filter((gift) => gift.categories.includes(1)).slice(0, 3)
 
   if (error) {
-    return (<p>{error.message}</p>)
+    return (<div> <NotFoundMessage />
+      <p>{error.message}</p> </div>)
   }
 
   return (
@@ -28,14 +29,14 @@ function BirthdaySection() {
         </div>
       </Link>
       <div className="flex flex-wrap md:mx-6 lg:mx-20">
-      {isLoading ? (
-        <IsLoading/>
-      ) : ( BirthdayGifts.map((giftData) => (
+        {isLoading ? (
+          <IsLoading />
+        ) : (BirthdayGifts.map((giftData) => (
           <div key={giftData.id} className="w-full sm:w-1/2 md:w-1/3">
             <GiftCard giftData={giftData} />
           </div>
         )))
-      }
+        }
       </div>
     </div>
   );

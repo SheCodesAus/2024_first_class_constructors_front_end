@@ -12,12 +12,9 @@ function AnniversarySection() {
   const AnniversaryGifts = gifts
     .filter((gift) => gift.categories.includes(2)).slice(0, 3)
 
-  if (isLoading) {
-    return <IsLoading />
-  }
-
   if (error) {
-    return (<p>{error.message}</p>)
+    return (<div> <NotFoundMessage />
+      <p>{error.message}</p> </div>)
   }
 
   return (
