@@ -18,7 +18,7 @@ function RemoveButton({ giftData }) {
 
     return (
         <button 
-            className="flex justify-center border rounded-md bg-white border-primary-200 text-primary-200 hover:bg-primary-200 hover:text-white font-montserrat text-h3 uppercase text-center my-2 w-full p-4 backdrop:tracking-wider"
+            className="flex justify-center border rounded-md bg-white border-primary-200 text-primary-200 hover:bg-primary-200 hover:text-white font-montserrat text-base  md:text-lg uppercase text-center my-2  w-full p-3 md:p-4 backdrop-filter backdrop-blur-sm"
             onClick={handleRemoveClick}
         >
             REMOVE
