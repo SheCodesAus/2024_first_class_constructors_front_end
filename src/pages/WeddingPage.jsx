@@ -12,10 +12,12 @@ function WeddingPage() {
   );
 
   if (isLoading) {
-    return <IsLoading/> }
+    return <IsLoading />
+  }
 
   if (error) {
-      return (<p>{error.message}</p>)
+    return (<div> <NotFoundMessage />
+      <p>{error.message}</p> </div>)
   }
 
   return (
