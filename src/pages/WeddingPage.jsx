@@ -2,6 +2,7 @@ import React from "react";
 import useGifts from "../hooks/use-gifts";
 import GiftCard from "../components/GiftCard";
 import IsLoading from "../components/IsLoading";
+import NotFoundMessage from "../components/NotFound";
 
 function WeddingPage() {
   const { gifts, isLoading, error } = useGifts();
