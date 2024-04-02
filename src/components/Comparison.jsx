@@ -41,7 +41,7 @@ function Comparison() {
 
         </div>
 
-        <div className="m-4  flex lg:mx-30 lg:py-10 flex-col justify-center h-full bg-opacity-20 rounded-md overflow-hidden shadow-lg  ">
+        <div className="m-4  flex lg:mx-24 lg:px-20 lg:py-10 flex-col justify-center h-full bg-opacity-20 rounded-md overflow-hidden shadow-lg  ">
            
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4 bg-white">
     {gifts.length >= 1 ? (
