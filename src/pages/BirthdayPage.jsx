@@ -1,11 +1,11 @@
 import React from "react";
 import { useState, useEffect } from 'react';
 import useGifts from "../hooks/use-gifts";
-
 import GiftCard from "../components/GiftCard";
+import PriceFilter from "../components/PriceFilter";
 
 function BirthdayPage() {
-  const { gifts, isLoading, error } = useGifts();
+  const { gifts, setGifts, isLoading, error, filteredGifts, setFilteredGifts } = useGifts();
   // const [errorMessage, setErrorMessage] = useState(null);
 
   const BirthdayGifts = gifts.filter((gift) =>
@@ -29,7 +29,7 @@ function BirthdayPage() {
           </h1>
         </div>
       </div>
-      
+      <PriceFilter/>
       <div className="flex flex-wrap md:mx-6 lg:mx-20">
       {BirthdayGifts.map((giftData) => (
           <div key={giftData.id} className="w-full sm:w-1/2 md:w-1/3">

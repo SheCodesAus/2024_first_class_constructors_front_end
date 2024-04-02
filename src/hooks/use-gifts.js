@@ -6,12 +6,14 @@ export default function useGifts() {
     const [gifts, setGifts] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState();
+    const [filteredGifts, setFilteredGifts] = useState([]);
 
 
     useEffect(() =>{
         getGifts()
             .then((gifts) => {
                 setGifts(gifts);
+                setFilteredGifts(gifts);
                 setIsLoading(false);
             })
 
@@ -22,5 +24,5 @@ export default function useGifts() {
     }, []);
    
 
-    return { gifts, isLoading, error };
+    return { gifts, setGifts, isLoading, error, filteredGifts, setFilteredGifts};
 }
