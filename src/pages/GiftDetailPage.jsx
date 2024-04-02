@@ -2,23 +2,26 @@ import React from "react";
 import useGift from "../hooks/use-gift";
 import CompareButton from "../components/CompareButton.jsx";
 import IsLoading from "../components/IsLoading";
+import NotFoundMessage from "../components/NotFound";
 
 import { Link, useParams } from "react-router-dom";
 
 function GiftDetailPage() {
-  const { id } = useParams(); 
+  const { id } = useParams();
   const { gift, isLoading, error } = useGift(id);
-  
-  if (isLoading) {
-    return <IsLoading/> }
 
-  if (error || !gift) {
-    return <p>Sorry, we couldn't find the gift you're looking for </p>;
+  if (isLoading) {
+    return <IsLoading />
+  }
+
+  if (error) {
+    return (<div> <NotFoundMessage />
+      <p>{error.message}</p> </div>)
   }
 
   //leaving in comments for this section for others to understand.
   const handleAddGift = () => {
-    
+
     const existingGifts = JSON.parse(localStorage.getItem("gifts")) || []; // Retrieve existing gifts from localStorage or initialize as an empty array
 
     if (existingGifts.some(existingGift => existingGift.id === gift.id)) { // Check if the gift already exists in the array
@@ -30,13 +33,13 @@ function GiftDetailPage() {
       alert("You can only compare up to 4 gifts!");
       return;
     }
-      
-      const updatedGifts = [...existingGifts, gift]; // Add the current gift to the existing gifts array
-    
-      localStorage.setItem("gifts", JSON.stringify(updatedGifts)); // Save the updated gifts array to localStorage
 
-      alert("Gift added to compare list!");
-      console.log(updatedGifts)
+    const updatedGifts = [...existingGifts, gift]; // Add the current gift to the existing gifts array
+
+    localStorage.setItem("gifts", JSON.stringify(updatedGifts)); // Save the updated gifts array to localStorage
+
+    alert("Gift added to compare list!");
+    console.log(updatedGifts)
   }; //AS: Can do more clean up on this function
 
   return (
@@ -89,7 +92,8 @@ function GiftDetailPage() {
         </div>
       </div>
     </div>
-  );}
+  );
+}
 
 
 export default GiftDetailPage;

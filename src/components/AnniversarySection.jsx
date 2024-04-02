@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import useGifts from "../hooks/use-gifts";
 import IsLoading from "./IsLoading";
 import GiftCard from "./GiftCard";
-import NotFoundMessage from "./NotFoundMessage";
+import NotFoundMessage from "./NotFound";
 
 function AnniversarySection() {
   const { gifts, isLoading, error } = useGifts();

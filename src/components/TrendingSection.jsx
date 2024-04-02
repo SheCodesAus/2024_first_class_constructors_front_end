@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import GiftCard from "./GiftCard";
 import useFeaturedGifts from "../hooks/use-featured-gifts.js"
 import IsLoading from "./IsLoading";
-import NotFoundMessage from "./NotFoundMessage";
+import NotFoundMessage from "./NotFound";
 
 function TrendingSection() {
   const { featuredGifts, isLoading, error } = useFeaturedGifts();

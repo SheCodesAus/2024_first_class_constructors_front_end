@@ -2,6 +2,7 @@ import React from "react";
 import useGifts from "../hooks/use-gifts";
 import IsLoading from "../components/IsLoading";
 import GiftCard from "../components/GiftCard";
+import NotFoundMessage from "../components/NotFound";
 
 function GraduationPage() {
   const { gifts, isLoading, error } = useGifts();
