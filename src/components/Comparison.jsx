@@ -73,13 +73,13 @@ export default Comparison;
             </div>
         ))
     ) : (
-        <p>Add gifts to your comparison list</p>
+        <p  className="text-p lace-items-center tracking-wider uppercase rounded-md border my-8 bg-white border-primary-200 text-primary-200 hover:bg-primary-200 hover:text-white p-4">Add gifts to your comparison list</p>
     )}
 </div>
 
         </div>
         </div>
     );
-} */}
+}
 
-// export default Comparison;
+export default Comparison; */}
