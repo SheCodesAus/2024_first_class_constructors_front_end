@@ -33,7 +33,7 @@ function Comparison() {
 
         <div className="bg-[url('/assets/Images/pexels-ylanite-koppens-796607.jpg')] bg-cover bg-center flex justify-center items-center h-full">
           <div className="bg-primary-300 px-6 my-14 md:my-14 md:px-10 lg:px-20">
-            <h1 className="font-fredoka text-slate-100 text-h1 md:text-4xl text-center tracking-wider uppercase">
+            <h1 className="font-fredoka text-slate-100 text-h1 text-center tracking-wider uppercase px-1">
               YOUR PICKS
             </h1>
           </div>
