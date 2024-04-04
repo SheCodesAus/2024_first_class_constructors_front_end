@@ -43,7 +43,7 @@ function GiftDetailPage() {
     <div className="flex flex-col justify-center align-center space-y-14 m-12 ">
       <div className="bg-[url('src/assets/Images/pexels-photo-6331088.jpeg')] bg-cover bg-center flex justify-center items-center h-full">
         <div className="bg-primary-500 px-6 my-14 md:my-14 md:px-10 lg:px-20">
-          <h1 className="font-fredoka text-slate-100 text-h1 md:text-4xl text-center tracking-wider uppercase">
+          <h1 className="font-fredoka text-slate-100 text-h1  px-1 text-center tracking-wider uppercase">
             HAPPY SHOPPING
           </h1>
         </div>
