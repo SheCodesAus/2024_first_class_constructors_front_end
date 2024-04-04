@@ -36,7 +36,7 @@ function Header() {
                   <NavLink to="/ProfilePage">
                     <img
                       src="public/assets/Images/SignInIconVector.svg"
-                      alt="Sign Up Icon"
+                      alt="Profile Icon"
                       className="w-auto h-6"
                     />
                   </NavLink>
@@ -53,6 +53,14 @@ function Header() {
               </ul>
             ) : (
               <ul>
+                <li>
+                  <NavLink
+                    to="/SignupPage"
+                    className="font-fredoka text-h5 decoration-slice text-primary-200 uppercase"
+                  >
+                    Sign Up
+                  </NavLink>
+                </li>
                 <li>
                   <NavLink
                     to="/login"
