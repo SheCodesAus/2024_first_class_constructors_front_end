@@ -36,7 +36,7 @@ function Header() {
                   <NavLink to="/ProfilePage">
                     <img
                       src="public/assets/Images/SignInIconVector.svg"
-                      alt="Sign In Compare Icon"
+                      alt="Sign Up Icon"
                       className="w-auto h-6"
                     />
                   </NavLink>

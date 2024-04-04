@@ -27,7 +27,7 @@ function ProfileCard() {
       <div className="flex flex-col md:flex-row items-center space-y-4 md:space-x-8 md:space-y-4">
         <img className="w-28 h-28 md:w-32 md:h-32 rounded-full object-cover" src="/public/assets/Images/avatar-1577909_1280.webp" alt="default avatar icon" />
         <div className="space-y-1">
-          <p className="font-montserrat  text-primary-200">User ID: {user.id}</p>
+          {/* <p className="font-montserrat  text-primary-200">User ID: {user.id}</p> */}
           <p className="font-montserrat text-primary-200">Name: {user.first_name} {user.last_name}</p>
           <p className="font-montserrat text-primary-200">Email: {user.email}</p>
           <p className="font-montserrat text-primary-200">Date Joined: {new Date(user.date_joined).toLocaleDateString("en-GB")}</p>
