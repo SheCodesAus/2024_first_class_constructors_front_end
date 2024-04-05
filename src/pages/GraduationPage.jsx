@@ -1,8 +1,8 @@
 import React from "react";
-import { useState, useEffect } from 'react';
 import useGifts from "../hooks/use-gifts";
-
+import IsLoading from "../components/IsLoading";
 import GiftCard from "../components/GiftCard";
+import NotFoundMessage from "../components/NotFound";
 
 function GraduationPage() {
   const { gifts, isLoading, error } = useGifts();
@@ -13,11 +13,12 @@ function GraduationPage() {
   );
 
   if (isLoading) {
-    return (<p>Loading</p>)
+    return <IsLoading />
   }
 
   if (error) {
-      return (<p>{error.message}</p>)
+    return (<div> <NotFoundMessage />
+      <p>{error.message}</p> </div>)
   }
 
   return (
@@ -29,7 +30,7 @@ function GraduationPage() {
           </h1>
         </div>
       </div>
-      
+
       <div className="flex flex-wrap md:mx-6 lg:mx-20">
         {GraduationGifts.map((giftData) => (
           <div key={giftData.id} className="w-full sm:w-1/2 md:w-1/3">
