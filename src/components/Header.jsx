@@ -21,7 +21,7 @@ function Header() {
           <div className="flex flex-row gap-4">
             <NavLink to="/compare">
               <img
-                src="public/assets/Images/GiftIconVector.svg"
+                src="/assets/Images/GiftIconVector.svg"
                 alt="Gift Compare Icon"
                 className="w-auto h-6"
               />
@@ -35,7 +35,7 @@ function Header() {
                 <li>
                   <NavLink to="/ProfilePage">
                     <img
-                      src="public/assets/Images/SignInIconVector.svg"
+                      src="/assets/Images/SignInIconVector.svg"
                       alt="Profile Icon"
                       className="w-auto h-6"
                     />
@@ -55,14 +55,6 @@ function Header() {
               <ul>
                 <li>
                   <NavLink
-                    to="/SignupPage"
-                    className="font-fredoka text-h5 decoration-slice text-primary-200 uppercase"
-                  >
-                    Sign Up
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
                     to="/login"
                     className="font-fredoka text-h5 decoration-slice text-primary-200 uppercase"
                   >
@@ -79,7 +71,7 @@ function Header() {
       <div className="mb-4 flex flex-col items-center">
         <NavLink to="/">
           <img
-            src="public/assets/Images/GIFT_COMPARE_LOGO.svg"
+            src="/assets/Images/GIFT_COMPARE_LOGO.svg"
             alt="Gift Compare Logo"
             className="w-max-w-lg h-20"
           />
@@ -89,7 +81,7 @@ function Header() {
       {/* GIFT COMPARE SLOGAN */}
       <div className="px-6 flex flex-col items-center">
         <img
-          src="public/assets/Images/A_ good_gift_makes_every_moment_happy.svg"
+          src="/assets/Images/A_ good_gift_makes_every_moment_happy.svg"
              
           alt="A good gift"
           className="h-auto w-80 m-2"

@@ -21,7 +21,7 @@ function ProfileCard() {
   }
 
   return (
-    <div className="border bg-white shadow rounded-lg p-4 m-12 md:mx-40 lg:mx-80 w-auto h-full">
+    <div className="border bg-white shadow rounded-md p-4 m-12 md:mx-40 lg:mx-80 w-auto h-full">
     <div className="flex flex-col items-center text-center md:text-left space-y-4 md:space-y-2 p-6 mb-3">
       <h1 className="text-h1 font-bold text-primary-200">My Profile</h1>
       <div className="flex flex-col md:flex-row items-center space-y-4 md:space-x-8 md:space-y-4">
