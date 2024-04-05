@@ -1,8 +1,8 @@
 import React from "react";
-import { useState, useEffect } from 'react';
 import useGifts from "../hooks/use-gifts";
-
+import IsLoading from "../components/IsLoading";
 import GiftCard from "../components/GiftCard";
+import NotFoundMessage from "../components/NotFound";
 
 function AnniversaryPage() {
   const { gifts, isLoading, error } = useGifts();
@@ -13,11 +13,12 @@ function AnniversaryPage() {
   );
 
   if (isLoading) {
-    return (<p>Loading</p>)
+    return <IsLoading />
   }
 
   if (error) {
-      return (<p>{error.message}</p>)
+    return (<div> <NotFoundMessage />
+      <p>{error.message}</p> </div>)
   }
 
   return (
@@ -29,9 +30,9 @@ function AnniversaryPage() {
         </h1>
         </div>
       </div>
-      
+
       <div className="flex flex-wrap md:mx-6 lg:mx-20">
-      {AnniversaryGifts.map((giftData) => (
+        {AnniversaryGifts.map((giftData) => (
           <div key={giftData.id} className="w-full sm:w-1/2 md:w-1/3">
             <GiftCard giftData={giftData} />
           </div>

@@ -2,8 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from 'react';
 import useGifts from "../hooks/use-gifts";
-
+import IsLoading from "./IsLoading";
 import GiftCard from "./GiftCard";
+import NotFoundMessage from "./NotFound";
 
 function AnniversarySection() {
   const { gifts, isLoading, error } = useGifts();
@@ -12,14 +13,11 @@ function AnniversarySection() {
   const AnniversaryGifts = gifts
     .filter((gift) => gift.categories.includes(2)).slice(0, 3)
 
-    if (isLoading) {
-      return (<p>Loading</p>)
-    }
-  
-    if (error) {
-        return (<p>{error.message}</p>)
-    }
-    
+  if (error) {
+    return (<div> <NotFoundMessage />
+      <p>{error.message}</p> </div>)
+  }
+
   return (
     <div className="flex flex-col justify-center align-center space-y-10">
       <Link to="/AnniversaryPage">
@@ -32,11 +30,14 @@ function AnniversarySection() {
         </div>
       </Link>
       <div className="flex flex-wrap md:mx-6 lg:mx-20">
-        {AnniversaryGifts.map((giftData) => (
+        {isLoading ? (
+          <IsLoading />
+        ) : (AnniversaryGifts.map((giftData) => (
           <div key={giftData.id} className="w-full sm:w-1/2 md:w-1/3">
             <GiftCard giftData={giftData} />
           </div>
-        ))}
+        )))
+        }
       </div>
     </div>
   );
