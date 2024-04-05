@@ -44,7 +44,7 @@ function GiftDetailPage() {
 
   return (
     <div className="flex flex-col justify-center align-center space-y-14 m-12 ">
-      <div className="bg-[url('/assets/Images/photo-1623638308822-7529ea3cf094.jpeg')] bg-cover bg-center flex justify-center items-center h-full">
+      <div className="bg-[url('/assets/Images/photo-1525351159099-81893194469e.avif')] bg-cover bg-center flex justify-center items-center h-full">
         <div className="bg-primary-300 px-6 my-14 md:my-14 md:px-10 lg:px-20">
           <h1 className="font-fredoka text-slate-100 text-h1 text-center tracking-wider uppercase px-1">
             HAPPY SHOPPING
@@ -82,7 +82,7 @@ function GiftDetailPage() {
           <div>
             <CompareButton onClick={handleAddGift} />
 
-            <Link to={gift.source_url}>
+            <Link to={gift.source_url} target="_blank">
 
               <button className="flex justify-center bg-white border rounded-md border-primary-200 text-primary-200 hover:bg-primary-200 hover:text-white  font-montserrat text-h4 uppercase text-center my-5 w-full p-4 backdrop:tracking-wider">
                 BUY ITEM HERE

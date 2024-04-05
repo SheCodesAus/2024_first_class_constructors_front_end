@@ -13,7 +13,7 @@ function Header() {
   };
 
   return (
-    <div className="mt-4">
+    <div className="relative mt-4">
       <div className="mx-4 flex flex-row justify-between">
         <h5 className="font-fredoka text-h5 text-primary-200">$ AUD</h5>
         <div className="flex flex-row space-x-3">
