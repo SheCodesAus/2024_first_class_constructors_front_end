@@ -1,14 +1,14 @@
-import React from 'react';
+import React from "react";
 
 function NotFoundMessage() {
-  return(
+  return (
     <div className="bg-cover bg-center flex justify-center items-center h-full">
-      <div className="bg-primary-500 px-6 my-14 md:mx-40 md:px-10 lg:px-20">
-        <h1 className="font-fredoka text-slate-100 text-h1 text-center tracking-wider uppercase px-1">
-          ERROR 404
+      <div className="bg-primary-600/15 shadow rounded-lg p-6 px-10 mx:16 my-14 md:mx-40 md:px-10 lg:px-20 space-y-1">
+        <h1 className="font-fredoka text-primary-500 text-h2 font-semibold text-center tracking-wider px-1">
+          404 - Not Found
         </h1>
-        <h2 className="font-fredoka text-slate-100 text-h2 text-center tracking-wider px-1">
-          Could not find the perfect gift ideas
+        <h2 className="font-fredoka text-primary-500 text-h3 text-center tracking-wider px-1">
+          Oops! Could not find the perfect gift ideas!
         </h2>
       </div>
     </div>
