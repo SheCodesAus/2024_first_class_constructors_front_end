@@ -41,7 +41,7 @@ function GiftCard(props) {
             <img
               src={giftData.img}
               alt={giftData.name}
-              className="absolute inset-0 object-cover w-full h-full"
+              className="absolute inset-0 object-cover w-full h-full p-4"
             />
           </div>
         </Link>
@@ -52,8 +52,8 @@ function GiftCard(props) {
           {giftData.name}
         </h3>
       </div>
-      <h3 className="font-montserrat  text-primary-100  text-[22px] tracking-wider">
-        {giftData.price}
+      <h3 className="font-montserrat text-primary-100 text-[22px] tracking-wider">
+        ${giftData.price}
       </h3>
 
       <div>

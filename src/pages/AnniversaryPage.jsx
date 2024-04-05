@@ -31,7 +31,7 @@ function AnniversaryPage() {
         </div>
       </div>
 
-      <div className="flex flex-wrap md:mx-6 lg:mx-20">
+      <div className="flex flex-wrap mx-6 md:mx-8 lg:mx-20 xl:mx-60">
         {AnniversaryGifts.map((giftData) => (
           <div key={giftData.id} className="w-full sm:w-1/2 md:w-1/3">
             <GiftCard giftData={giftData} />

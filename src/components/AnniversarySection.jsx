@@ -19,7 +19,7 @@ function AnniversarySection() {
   }
 
   return (
-    <div className="flex flex-col justify-center align-center space-y-10">
+    <div className="flex flex-col justify-center align-center space-y-8">
       <Link to="/AnniversaryPage">
         <div className="bg-[url('/assets/Images/iStock-1825131978L.jpg')] bg-cover bg-center flex justify-center items-center h-full">
           <div className="bg-primary-600 px-6 my-14 md:mx-40 md:px-10 lg:px-20">
@@ -29,7 +29,7 @@ function AnniversarySection() {
           </div>
         </div>
       </Link>
-      <div className="flex flex-wrap md:mx-6 lg:mx-20">
+      <div className="flex flex-wrap mx-6 md:mx-8 lg:mx-20 xl:mx-60">
         {isLoading ? (
           <IsLoading />
         ) : (AnniversaryGifts.map((giftData) => (
