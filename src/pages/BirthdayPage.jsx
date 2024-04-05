@@ -6,18 +6,24 @@ import PriceFilter from "../components/PriceFilter";
 
 function BirthdayPage() {
   const { gifts, isLoading, error } = useGifts();
-  const [priceFilter, setPriceFilter] = useState(null);
+  const [priceFilter, setPriceFilter] = useState([]);
 
   const updatePriceFilter = (filterValue) => {
-      setPriceFilter(filterValue);
+    if (filterValue) {
+      setPriceFilter([...priceFilter, filterValue]);
+  }
   };
 
   const clearPriceFilter = () => {
-      setPriceFilter(null);
+      setPriceFilter([]);
+  };
+
+  const isGiftWithinPriceRange = (giftPrice, filters) => {
+    return filters.some(filter => giftPrice >= filter.min && (!filter.max || giftPrice <= filter.max));
   };
 
   const filteredGifts = gifts.filter((gift) =>
-      gift.categories.includes(1) && (!priceFilter || gift.price <= priceFilter)
+      gift.categories.includes(1) && (!priceFilter.length || priceFilter.some(filter => isGiftWithinPriceRange(gift.price, filter)))
   );
 
   if (isLoading) {
@@ -27,6 +33,8 @@ function BirthdayPage() {
   if (error) {
       return (<p>{error.message}</p>);
   }
+  console.log(priceFilter.min)
+  console.log(priceFilter.max)
 
   return (
       <div className="flex flex-col justify-center align-center space-y-8 m-12">

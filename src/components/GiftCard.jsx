@@ -49,7 +49,6 @@ function GiftCard(props) {
 
       <div className="my-3 space-y-2 min-h-14">
         <h3 className="font-montserrat text-primary-100 text-h3 tracking-wider uppercase line-clamp-2">
-          {giftData.id}
           {giftData.name}
         </h3>
       </div>
