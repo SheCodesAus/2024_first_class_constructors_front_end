@@ -56,12 +56,16 @@ function Comparison() {
           </div>
         </div>
 
-        <div className="m-4 flex justify-center items-center h-full bg-opacity-20 rounded-md overflow-hidden mb-7 py-5 ">
-  <p className="sm:min-h-8 sm:min-w-20 text-center text-p tracking-wider  uppercase rounded-md border  bg-white border-primary-200 text-primary-200 hover:bg-primary-200 hover:text-white p-4">
-    Add gifts to your comparison list
-  </p>
-</div>
-
+        <div className="m-4 flex flex-col justify-center items-center h-full bg-opacity-20 rounded-md overflow-hidden mb-7 py-5 space-y-6">
+          <h2 className="font-fredoka text-primary-500 text-h2 text-center font-semibold tracking-wider px-1">
+            Oops! There's no gifts here!
+          </h2>
+          <NavLink to="/">
+            <p className="sm:min-h-8 sm:min-w-20 font-montserrat text-center tracking-wider uppercase rounded-md border  bg-white border-primary-500 text-primary-500 hover:bg-primary-500 hover:text-white hover:font-medium p-4">
+              Explore Gift Options
+            </p>
+          </NavLink>
+        </div>
       </div>
     );
   }
