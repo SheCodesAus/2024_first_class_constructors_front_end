@@ -1,24 +1,27 @@
 import React from "react";
 import useGift from "../hooks/use-gift";
 import CompareButton from "../components/CompareButton.jsx";
-import { Link } from "react-router-dom";
-import { useParams } from "react-router-dom";
+import IsLoading from "../components/IsLoading";
+import NotFoundMessage from "../components/NotFound";
+
+import { Link, useParams } from "react-router-dom";
 
 function GiftDetailPage() {
-  const { id } = useParams(); 
+  const { id } = useParams();
   const { gift, isLoading, error } = useGift(id);
-  
+
   if (isLoading) {
-    return <p>Loading...</p>;
+    return <IsLoading />
   }
 
-  if (error || !gift) {
-    return <p>Sorry, we couldn't find the gift you're looking for </p>;
+  if (error) {
+    return (<div> <NotFoundMessage />
+      <p>{error.message}</p> </div>)
   }
 
   //leaving in comments for this section for others to understand.
   const handleAddGift = () => {
-    
+
     const existingGifts = JSON.parse(localStorage.getItem("gifts")) || []; // Retrieve existing gifts from localStorage or initialize as an empty array
 
     if (existingGifts.some(existingGift => existingGift.id === gift.id)) { // Check if the gift already exists in the array
@@ -30,20 +33,20 @@ function GiftDetailPage() {
       alert("You can only compare up to 4 gifts!");
       return;
     }
-      
-      const updatedGifts = [...existingGifts, gift]; // Add the current gift to the existing gifts array
-    
-      localStorage.setItem("gifts", JSON.stringify(updatedGifts)); // Save the updated gifts array to localStorage
 
-      alert("Gift added to compare list!");
-      console.log(updatedGifts)
+    const updatedGifts = [...existingGifts, gift]; // Add the current gift to the existing gifts array
+
+    localStorage.setItem("gifts", JSON.stringify(updatedGifts)); // Save the updated gifts array to localStorage
+
+    alert("Gift added to compare list!");
+    console.log(updatedGifts)
   }; //AS: Can do more clean up on this function
 
   return (
     <div className="flex flex-col justify-center align-center space-y-14 m-12 ">
-      <div className="bg-[url('src/assets/Images/pexels-photo-6331088.jpeg')] bg-cover bg-center flex justify-center items-center h-full">
-        <div className="bg-primary-500 px-6 my-14 md:my-14 md:px-10 lg:px-20">
-          <h1 className="font-fredoka text-slate-100 text-h1  px-1 text-center tracking-wider uppercase">
+      <div className="bg-[url('/assets/Images/photo-1623638308822-7529ea3cf094.jpeg')] bg-cover bg-center flex justify-center items-center h-full">
+        <div className="bg-primary-300 px-6 my-14 md:my-14 md:px-10 lg:px-20">
+          <h1 className="font-fredoka text-slate-100 text-h1 text-center tracking-wider uppercase px-1">
             HAPPY SHOPPING
           </h1>
         </div>
@@ -89,7 +92,8 @@ function GiftDetailPage() {
         </div>
       </div>
     </div>
-  );}
+  );
+}
 
 
 export default GiftDetailPage;
