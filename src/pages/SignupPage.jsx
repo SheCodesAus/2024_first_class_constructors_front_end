@@ -4,7 +4,7 @@ import SignupForm from "../components/SignupForm";
 function SignupPage() {
   return (
     <div className="flex flex-col justify-center align-center space-y-8 m-12">
-      <div className="bg-[url('/assets/Images/pexels-photo-6331083.jpg')] bg-cover bg-center flex justify-center items-center h-full">
+      <div className="bg-[url('/assets/Images/purple_top-view-composition-festive-wrapped-gifts-with-copy-space.jpg')] bg-cover bg-center flex justify-center items-center h-full">
         <div className="bg-primary-500 px-6 my-14 md:mx-40 md:px-10 lg:px-20">
           <h1 className="font-fredoka text-slate-100 text-h1 text-center tracking-wider uppercase px-1">
             Sign Up

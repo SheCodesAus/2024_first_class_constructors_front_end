@@ -25,7 +25,7 @@ function ProfileCard() {
 
   return (
     <div className=" flex flex-col justify-center align-center space-y-8 m-12">
-      <div className="bg-[url('/assets/Images/falling-golden-confetti-pink-background.jpg')] bg-cover bg-center flex justify-center items-center h-full">
+      <div className="bg-[url('public/assets/Images/pexels-photo-4040567.jpeg')] bg-cover bg-center flex justify-center items-center h-full">
         <div className="bg-primary-500 px-6 my-14 md:mx-40 md:px-10 lg:px-20">
           <h1 className="font-fredoka text-slate-100 text-h1 text-center tracking-wider uppercase px-1">
             My Profile
@@ -39,8 +39,8 @@ function ProfileCard() {
           </h2>
           <div className="flex flex-col md:flex-row items-center space-y-4 md:space-x-8 md:space-y-4">
             <img
-              className="w-28 h-28 md:w-32 md:h-32 rounded-full object-cover"
-              src="/assets/Images/avatar-1577909_1280.webp"
+              className="w-28 h-28 md:w-32 md:h-32 rounded-full object-cover opacity-80"
+              src="/assets/Images/avatar_img.jpg"
               alt="default avatar icon"
             />
             <div className="space-y-1">

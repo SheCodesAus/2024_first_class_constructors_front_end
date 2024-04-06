@@ -58,13 +58,13 @@ function GiftDetailPage() {
         </div>
       </div>
 
-      <div className="flex flex-col justify-center h-full m-12 p-10 border shadow rounded-md bg-primary-600/10 md:flex-row md:gap-6 lg:mx-40 xl:mx-80">
+      <div className="flex flex-col justify-center h-full mx-9 p-6 border shadow rounded-md md:flex-row md:p-10 md:gap-8 lg:mx-40 xl:mx-80">
         {/* image */}
         <div className="w-full justify-center">
           <img
             src={gift.img}
             alt={gift.name}
-            className="p-4 rounded-md shadow bg-white border border-primary-600/60 "
+            className="p-4 rounded-md shadow bg-white border border-primary-600/60"
           />
         </div>
 
@@ -75,7 +75,7 @@ function GiftDetailPage() {
               {gift.name}
             </h3>
             <h3 className="font-montserrat text-primary-100 text-[22px] tracking-wider">
-              {gift.price}
+              ${gift.price}
             </h3>
             <p className="font-montserrat text-p text-primary-100 tracking-wider">
               {gift.description}
