@@ -1,8 +1,8 @@
 import React from "react";
-import { useState, useEffect } from 'react';
 import useGifts from "../hooks/use-gifts";
-
 import GiftCard from "../components/GiftCard";
+import IsLoading from "../components/IsLoading";
+import NotFoundMessage from "../components/NotFound";
 
 function WeddingPage() {
   const { gifts, isLoading, error } = useGifts();
@@ -12,18 +12,19 @@ function WeddingPage() {
     gift.categories.includes(3)
   );
 
-    if (isLoading) {
-    return (<p>Loading</p>)
+  if (isLoading) {
+    return <IsLoading />
   }
 
   if (error) {
-      return (<p>{error.message}</p>)
+    return (<div> <NotFoundMessage />
+      <p>{error.message}</p> </div>)
   }
 
   return (
     <div className="flex flex-col justify-center align-center space-y-8 m-12">
-      <div className="bg-[url('src/assets/Images/pexels-photo-5312889.jpeg')] bg-cover bg-center flex justify-center items-center h-full">
-        <div className="bg-primary-300 px-6 my-14 md:mx-40 md:px-10 lg:px-20">
+      <div className="bg-[url('/assets/Images/pexels-pixabay-59948.jpg')] bg-cover bg-center flex justify-center items-center h-full">
+        <div className="bg-primary-200 px-6 my-14 md:mx-40 md:px-10 lg:px-20">
           <h1 className="font-fredoka  text-slate-100 text-h1 text-center tracking-wider uppercase px-1">
             Wedding
           </h1>

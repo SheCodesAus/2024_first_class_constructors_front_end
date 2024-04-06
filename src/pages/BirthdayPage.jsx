@@ -1,8 +1,9 @@
 import React from "react";
-import { useState, useEffect } from 'react';
 import useGifts from "../hooks/use-gifts";
 import GiftCard from "../components/GiftCard";
 import PriceFilter from "../components/PriceFilter";
+import IsLoading from "../components/IsLoading";
+import NotFoundMessage from "../components/NotFound";
 
 function BirthdayPage() {
   const { gifts, isLoading, error } = useGifts();
@@ -27,12 +28,13 @@ function BirthdayPage() {
   );
 
   if (isLoading) {
-      return (<p>Loading</p>);
+    return <IsLoading />
   }
-
   if (error) {
-      return (<p>{error.message}</p>);
+    return (<div> <NotFoundMessage />
+      <p>{error.message}</p> </div>)
   }
+    
   return (
       <div className="flex flex-col justify-center align-center space-y-8 m-12">
           <div className="bg-[url('src/assets/Images/pexels-photo-796605.webp')] bg-cover bg-center flex justify-center items-center h-full">
