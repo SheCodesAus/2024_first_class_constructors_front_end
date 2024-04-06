@@ -54,11 +54,11 @@ function PriceFilter({ priceFilter = { min: 0, max: 1000 }, updatePriceFilter, c
                     </button>
                     <button
                         className={`${
-                            isFilterActive({ min: 250, max: 1000 })
+                            isFilterActive({ min: 250.01, max: 1000 })
                                 ? "border rounded-md bg-primary-200 border-primary-200 text-white "
                                 : "border rounded-md bg-white border-primary-200 text-primary-200 "
                         } hover:bg-primary-200 hover:text-white py-2 px-4 rounded`}
-                        onClick={() => togglePriceFilter({ min: 250, max: 1000 })}
+                        onClick={() => togglePriceFilter({ min: 250.01, max: 1000 })}
                     >
                         {" "}
                         Above $250{" "}
