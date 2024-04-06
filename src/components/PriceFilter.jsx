@@ -78,24 +78,28 @@ function PriceFilter({ updatePriceFilter, clearPriceFilter }) {
           {" "}
           Above $250{" "}
         </button>
-        {selectedFilters.length === 0 && (
         <button
-          className={`border rounded-md bg-white border-primary-600 text-primary-600 cursor-not-allowed hover:bg-primary-200 hover:text-white py-2 px-4 rounded`}
+          className={`${
+            selectedFilters.length > 0
+              ? "border rounded-md bg-primary-500 text-white hover:bg-primary-200 hover:text-white"
+              : "border rounded-md bg-white border-primary-600 text-primary-600 cursor-not-allowed "
+          }  py-2 px-4 rounded`}
           disabled={selectedFilters.length === 0}
           onClick={applyFilters}
         >
           Apply Filters
         </button>
-      )}
-      {selectedFilters.length > 0 && (
         <button
-          className={`border rounded-md bg-white border-primary-600 text-primary-600 cursor-not-allowed hover:bg-primary-200 hover:text-white py-2 px-4 rounded`}
+          className={`${
+            selectedFilters.length > 0
+              ? "border rounded-md bg-primary-500 text-white hover:bg-primary-200 hover:text-white"
+              : "border rounded-md bg-white border-primary-600 text-primary-600 cursor-not-allowed "
+          } hover:bg-primary-200 hover:text-white py-2 px-4 rounded`}
           disabled={selectedFilters.length === 0}
           onClick={clearFilters}
         >
           Clear Filters
         </button>
-      )}
       </div>
     </div>
   );
