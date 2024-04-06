@@ -21,11 +21,11 @@ function PriceFilter({ priceFilter = { min: 0, max: 1000 }, updatePriceFilter, c
                 <div className="flex justify-center space-x-4 mt-4">
                     <button
                         className={`${
-                            isFilterActive({ min: 0, max: 50 })
+                            isFilterActive({ min: 0, max: 49.99 })
                                 ? "border rounded-md bg-primary-200 border-primary-200 text-white "
                                 : "border rounded-md bg-white border-primary-200 text-primary-200 "
                         } hover:bg-primary-200 hover:text-white py-2 px-4 rounded`}
-                        onClick={() => togglePriceFilter({ min: 0, max: 50 })}
+                        onClick={() => togglePriceFilter({ min: 0, max: 49.99 })}
                     >
                         {" "}
                         Under $50{" "}
