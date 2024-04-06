@@ -33,9 +33,6 @@ function BirthdayPage() {
   if (error) {
       return (<p>{error.message}</p>);
   }
-  console.log(priceFilter.min)
-  console.log(priceFilter.max)
-
   return (
       <div className="flex flex-col justify-center align-center space-y-8 m-12">
           <div className="bg-[url('src/assets/Images/pexels-photo-796605.webp')] bg-cover bg-center flex justify-center items-center h-full">
