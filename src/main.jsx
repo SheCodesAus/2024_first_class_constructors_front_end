@@ -14,6 +14,7 @@ import ChristmasPage from "./pages/ChristmasPage.jsx";
 import ComparePage from "./pages/ComparePage.jsx";
 import LoginPage from "./pages/LoginPage.jsx";
 import ProfilePage from "./pages/ProfilePage.jsx";
+import SignupPage from "./pages/SignupPage.jsx";
 
 
 import { AuthProvider } from "./components/AuthProvider.jsx";
@@ -27,6 +28,7 @@ const router = createBrowserRouter([
       { path: "/", element: <HomePage /> },
       { path: "compare", element: <ComparePage />},
       { path: "login", element: <LoginPage /> },
+      { path: "signup", element: <SignupPage /> },
       { path: "ProfilePage", element: <ProfilePage /> },
       { path: "BirthdayPage", element: <BirthdayPage /> },
       { path: "AnniversaryPage", element: <AnniversaryPage /> },
