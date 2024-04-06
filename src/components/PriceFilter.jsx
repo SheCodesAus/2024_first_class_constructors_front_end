@@ -94,7 +94,7 @@ function PriceFilter({ updatePriceFilter, clearPriceFilter }) {
             selectedFilters.length > 0
               ? "border rounded-md bg-primary-500 text-white hover:bg-primary-200 hover:text-white"
               : "border rounded-md bg-white border-primary-600 text-primary-600 cursor-not-allowed "
-          } hover:bg-primary-200 hover:text-white py-2 px-4 rounded`}
+          }  py-2 px-4 rounded`}
           disabled={selectedFilters.length === 0}
           onClick={clearFilters}
         >
