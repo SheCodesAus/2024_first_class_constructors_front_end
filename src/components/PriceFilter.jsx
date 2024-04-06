@@ -28,14 +28,12 @@ function PriceFilter({ updatePriceFilter, clearPriceFilter }) {
     return (
         <div>
             <div className="flex justify-center space-x-4 mt-4">
-                <button className={`${isFilterActive({ min: 0, max: 50 }) ? "bg-primary-200" : "bg-gray-300"} hover:bg-primary-200 text-white font-bold py-2 px-4 rounded`} onClick={() => togglePriceFilter({ min: 0, max: 50 })}> Under $50 </button>
-                <button className={`${isFilterActive({ min: 50, max: 100 }) ? "bg-primary-200" : "bg-gray-300"} hover:bg-primary-200 text-white font-bold py-2 px-4 rounded`} onClick={() => togglePriceFilter({ min: 50, max: 100 })}> $50 - $100 </button>
-                <button className={`${isFilterActive({ min: 100, max: 250 }) ? "bg-primary-200" : "bg-gray-300"} hover:bg-primary-200 text-white font-bold py-2 px-4 rounded`} onClick={() => togglePriceFilter({ min: 100, max: 250 })}> $100 - $250 </button>
-                <button className={`${isFilterActive({ min: 250, max: 1000 }) ? "bg-primary-200" : "bg-gray-300"} hover:bg-primary-200 text-white font-bold py-2 px-4 rounded`} onClick={() => togglePriceFilter({ min: 250, max: 1000 })}> Above $250 </button>
-            </div>
-            <div className="flex justify-center space-x-4 mt-4">
-                <button className="bg-primary-200 hover:bg-primary-300 text-white font-bold py-2 px-4 rounded" onClick={applyFilters}>Apply Filters</button>
-                <button className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded" onClick={clearFilters}>Clear Filters</button>
+                <button className={`${isFilterActive({ min: 0, max: 50 }) ? "border rounded-md bg-primary-200 border-primary-200 text-white " : "border rounded-md bg-white border-primary-200 text-primary-200 " } hover:bg-primary-200 hover:text-white py-2 px-4 rounded`} onClick={() => togglePriceFilter({ min: 0, max: 50 })}> Under $50 </button>
+                <button className={`${isFilterActive({ min: 50, max: 100 }) ? "border rounded-md bg-primary-200 border-primary-200 text-white " : "border rounded-md bg-white border-primary-200 text-primary-200 " } hover:bg-primary-200 hover:text-white py-2 px-4 rounded`} onClick={() => togglePriceFilter({ min: 50, max: 100 })}> $50 - $100 </button>
+                <button className={`${isFilterActive({ min: 100, max: 250 }) ? "border rounded-md bg-primary-200 border-primary-200 text-white " : "border rounded-md bg-white border-primary-200 text-primary-200 " } hover:bg-primary-200 hover:text-white py-2 px-4 rounded`} onClick={() => togglePriceFilter({ min: 100, max: 250 })}> $100 - $250 </button>
+                <button className={`${isFilterActive({ min: 250, max: 1000 }) ? "border rounded-md bg-primary-200 border-primary-200 text-white " : "border rounded-md bg-white border-primary-200 text-primary-200 " } hover:bg-primary-200 hover:text-white py-2 px-4 rounded`} onClick={() => togglePriceFilter({ min: 250, max: 1000 })}> Above $250 </button>
+                <button className={`${selectedFilters.length > 0 ? "border rounded-md bg-primary-500 text-white" : "border rounded-md bg-white border-primary-600 text-primary-600 " } hover:bg-primary-200 hover:text-white py-2 px-4 rounded`} onClick={applyFilters}>Apply Filters</button>
+                <button className={`${selectedFilters.length > 0 ? "border rounded-md bg-primary-500 text-white" : "border rounded-md bg-white border-primary-600 text-primary-600 " } hover:bg-primary-200 hover:text-white py-2 px-4 rounded`} onClick={clearFilters}>Clear Filters</button>
             </div>
         </div>
     );
