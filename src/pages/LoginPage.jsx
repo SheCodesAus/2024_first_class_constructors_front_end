@@ -12,9 +12,14 @@ function LoginPage() {
         </div>
       </div>
       <div className="flex flex-col space-y-4 mx-6 md:mx-20 md:px-20 lg:mx-40 lg:px-20 xl:mx-80 xl:px-20">
-        <h2 className="font-fredoka text-h3 text-center text-primary-200 tracking-wider">Don't have an account? Sign Up <NavLink to="/signup" className="underline">Here</NavLink></h2>
-        <div >
-        <LoginForm />
+        <h2 className="font-fredoka text-h3 text-center text-primary-200 tracking-wider">
+          Don't have an account? Sign Up{" "}
+          <NavLink to="/signup" className="underline">
+            Here
+          </NavLink>
+        </h2>
+        <div>
+          <LoginForm />
         </div>
       </div>
     </div>

@@ -9,7 +9,7 @@ function TrendingSection() {
   const { featuredGifts, isLoading, error } = useFeaturedGifts();
 
   if (error) {
-    return (<div> <NotFoundMessage />
+    return (<div className="flex flex-col items-center"> <NotFoundMessage />
       <p>{error.message}</p> </div>)
   }
 
@@ -22,7 +22,7 @@ function TrendingSection() {
           </h1>
         </div>
       </div>
-      <div className="flex flex-wrap mx-6 md:mx-8 lg:mx-20 xl:mx-60">
+      <div className="flex flex-wrap mx-6 md:mx-8 lg:mx-18 xl:mx-44">
         {isLoading ? (
           <IsLoading />
         ) : (featuredGifts.map((giftData) => (

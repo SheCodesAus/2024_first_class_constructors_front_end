@@ -14,7 +14,7 @@ function AnniversarySection() {
     .filter((gift) => gift.categories.includes(2)).slice(0, 3)
 
   if (error) {
-    return (<div> <NotFoundMessage />
+    return (<div className="flex flex-col items-center"> <NotFoundMessage />
       <p>{error.message}</p> </div>)
   }
 
@@ -29,7 +29,7 @@ function AnniversarySection() {
           </div>
         </div>
       </Link>
-      <div className="flex flex-wrap mx-6 md:mx-8 lg:mx-20 xl:mx-60">
+      <div className="flex flex-wrap mx-6 md:mx-8 lg:mx-20 xl:mx-44">
         {isLoading ? (
           <IsLoading />
         ) : (AnniversaryGifts.map((giftData) => (

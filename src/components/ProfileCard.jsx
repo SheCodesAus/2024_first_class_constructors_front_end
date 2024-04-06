@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import useUser from "../hooks/use-user.js";
 import { AuthContext } from "./AuthProvider.jsx";
+import IsLoading from "./IsLoading.jsx";
+import NotFoundMessage from "../components/NotFound";
 
 function ProfileCard() {
   const { auth } = useContext(AuthContext); //this accesses auth directly
@@ -13,11 +15,12 @@ function ProfileCard() {
   }
 
   if (isLoading) {
-    return <p>Loading</p>;
+    return <IsLoading />;
   }
 
   if (error) {
-    return <p>{error.message}</p>;
+    return (<div className="flex flex-col items-center"> <NotFoundMessage />
+      <p>{error.message}</p> </div>)
   }
 
   return (
@@ -37,7 +40,7 @@ function ProfileCard() {
           <div className="flex flex-col md:flex-row items-center space-y-4 md:space-x-8 md:space-y-4">
             <img
               className="w-28 h-28 md:w-32 md:h-32 rounded-full object-cover"
-              src="/public/assets/Images/avatar-1577909_1280.webp"
+              src="/assets/Images/avatar-1577909_1280.webp"
               alt="default avatar icon"
             />
             <div className="space-y-1">

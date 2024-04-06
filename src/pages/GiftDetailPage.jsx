@@ -15,7 +15,7 @@ function GiftDetailPage() {
   }
 
   if (error) {
-    return (<div> <NotFoundMessage />
+    return (<div className="flex flex-col items-center"> <NotFoundMessage />
       <p>{error.message}</p> </div>)
   }
 

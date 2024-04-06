@@ -17,7 +17,7 @@ function AnniversaryPage() {
   }
 
   if (error) {
-    return (<div> <NotFoundMessage />
+    return (<div className="flex flex-col items-center"> <NotFoundMessage />
       <p>{error.message}</p> </div>)
   }
 
@@ -31,7 +31,7 @@ function AnniversaryPage() {
         </div>
       </div>
 
-      <div className="flex flex-wrap mx-6 md:mx-8 lg:mx-20 xl:mx-60">
+      <div className="flex flex-wrap mx-6 md:mx-8 lg:mx-20 xl:mx-44">
         {AnniversaryGifts.map((giftData) => (
           <div key={giftData.id} className="w-full sm:w-1/2 md:w-1/3">
             <GiftCard giftData={giftData} />
