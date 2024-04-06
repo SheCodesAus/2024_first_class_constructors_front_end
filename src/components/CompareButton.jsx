@@ -10,9 +10,12 @@ const CompareButton = ({ text, onClick }) => {
       onClick={onClick}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="flex justify-center items-center bg-white border rounded-md border-primary-200 text-primary-200 hover:bg-primary-200 hover:text-white font-montserrat text-h4 uppercase text-center my-2 w-full py-4 px-8 backdrop:tracking-wider gap-3"
+      className="flex justify-center items-center bg-white border rounded-md border-primary-200 text-primary-200 hover:bg-primary-200 hover:text-white font-montserrat text-h4 uppercase text-center my-2 w-full py-4 px-8 md:px-10 backdrop:tracking-wider gap-3"
     >
+      <div className="pt-[0.20rem]">
       add to compare&nbsp;list
+      </div>
+     
       {isHovered ? (
         <img
           src="/assets/Images/WHITEGiftIconVector.svg"

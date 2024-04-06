@@ -35,7 +35,7 @@ function GiftCard(props) {
       <div className="">
         <Link to={`/gift/${giftData.id}`}>
           <div
-            className="rounded-md relative overflow-hidden bg-white border-[1px]  border-primary-600 border-opacity-80"
+            className="rounded-md relative overflow-hidden bg-white border-[1px] border-primary-600 border-opacity-80"
             style={{ paddingBottom: "100%" }}
           >
             <img
