@@ -24,7 +24,7 @@ function ProfileCard() {
   }
 
   return (
-    <div className=" flex flex-col justify-center align-center space-y-8 m-12">
+    <div className=" flex flex-col justify-center align-center space-y-8 my-12 mx-8">
       <div className="bg-[url('public/assets/Images/pexels-photo-4040567.jpeg')] bg-cover bg-center flex justify-center items-center h-full">
         <div className="bg-primary-500 px-6 my-14 md:mx-40 md:px-10 lg:px-20">
           <h1 className="font-fredoka text-slate-100 text-h1 text-center tracking-wider uppercase px-1">
@@ -32,7 +32,7 @@ function ProfileCard() {
           </h1>
         </div>
       </div>
-      <div className="border bg-white shadow rounded-md p-4 m-12 md:mx-20 md:px-10 lg:mx-40 xl:mx-80 xl:px-20 h-full">
+      <div className="border bg-white shadow rounded-md p-4 mx-4 md:mx-20 md:px-10 lg:mx-40 xl:mx-80 xl:px-20 h-full">
         <div className="flex flex-col items-center text-center md:text-left space-y-4 md:space-y-2 p-6 mb-3">
           <h2 className="text-h2 font-bold text-primary-200">
             {user.username}

@@ -29,7 +29,7 @@ function AnniversarySection() {
           </div>
         </div>
       </Link>
-      <div className="flex flex-wrap mx-6 md:mx-8 lg:mx-20 xl:mx-44">
+      <div className="flex flex-wrap mx-4 md:mx-8 lg:mx-20 xl:mx-44">
         {isLoading ? (
           <IsLoading />
         ) : (AnniversaryGifts.map((giftData) => (

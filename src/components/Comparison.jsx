@@ -26,7 +26,7 @@ function Comparison() {
   if (gifts.length >= 1) {
     return (
       //    top banner
-      <div className="flex flex-col justify-center align-center space-y-14 m-12 ">
+      <div className="flex flex-col justify-center align-center space-y-14 my-12 mx-8">
         <div className="bg-[url('/assets/Images/pexels-ylanite-koppens-796607.jpg')] bg-cover bg-center flex justify-center items-center h-full">
           <div className="bg-primary-300 px-6 my-14 md:my-14 md:px-10 lg:px-20">
             <h1 className="font-fredoka text-slate-100 text-h1 text-center tracking-wider uppercase px-1">
@@ -35,7 +35,7 @@ function Comparison() {
           </div>
         </div>
 
-        <div className="flex justify-center h-full mx-10 md:mx-0 lg:mx-20 xl:mx-44">
+        <div className="flex justify-center h-full mx-4 md:mx-0 lg:mx-20 xl:mx-44">
   <div className="flex flex-wrap justify-center">
     {gifts.map((gift) => (
       <div key={gift.id} className="w-full sm:w-1/2 md:w-1/4 lg:w-1/4 xl:w-1/4">
@@ -50,7 +50,7 @@ function Comparison() {
     );
   } else {
     return (
-      <div className="flex flex-col justify-center align-center space-y-14 m-12 ">
+      <div className="flex flex-col justify-center align-center space-y-14 my-12 mx-8">
         <div className="bg-[url('/assets/Images/pexels-ylanite-koppens-796607.jpg')] bg-cover bg-center flex justify-center items-center h-full">
           <div className="bg-primary-300 px-6 my-14 md:my-14 md:px-10 lg:px-20">
             <h1 className="font-fredoka text-slate-100 text-h1 text-center tracking-wider uppercase">
