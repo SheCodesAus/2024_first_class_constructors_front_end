@@ -53,7 +53,7 @@ function GiftCard(props) {
         </h3>
       </div>
       <h3 className="font-montserrat  text-primary-100  text-[22px] tracking-wider">
-        {giftData.price}
+        ${giftData.price}
       </h3>
 
       <div>
