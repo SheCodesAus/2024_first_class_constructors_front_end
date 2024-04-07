@@ -1,24 +1,42 @@
 import React from "react";
+import { useState } from "react";
 import useGifts from "../hooks/use-gifts";
-import IsLoading from "../components/IsLoading";
 import GiftCard from "../components/GiftCard";
+import PriceFilter from "../components/PriceFilter"
+import IsLoading from "../components/IsLoading";
 import NotFoundMessage from "../components/NotFound";
 
 function AnniversaryPage() {
   const { gifts, isLoading, error } = useGifts();
-  // const [errorMessage, setErrorMessage] = useState(null);
+  const [priceFilter, setPriceFilter] = useState(null);
 
-  const AnniversaryGifts = gifts.filter((gift) =>
-    gift.categories.includes(2)
-  );
+  const updatePriceFilter = (filterValue) => {
+    setPriceFilter(filterValue);
+  };
+
+  const clearPriceFilter = () => {
+    setPriceFilter(null);
+  };
+
+  const filteredGifts = gifts.filter(
+    (gift) =>
+      gift.categories.includes(2) &&
+      (!priceFilter || (gift.price >= priceFilter.min && gift.price <= priceFilter.max))
+  )
+  .sort((a,b) => a.price - b.price);
 
   if (isLoading) {
-    return <IsLoading />
+    return <IsLoading />;
   }
 
   if (error) {
-    return (<div> <NotFoundMessage />
-      <p>{error.message}</p> </div>)
+    return (
+      <div>
+        {" "}
+        <NotFoundMessage />
+        <p>{error.message}</p>{" "}
+      </div>
+    );
   }
 
   return (
@@ -30,9 +48,13 @@ function AnniversaryPage() {
         </h1>
         </div>
       </div>
-
+      <PriceFilter
+        priceFilter={priceFilter}
+        updatePriceFilter={updatePriceFilter}
+        clearPriceFilter={clearPriceFilter}
+      />
       <div className="flex flex-wrap md:mx-6 lg:mx-20">
-        {AnniversaryGifts.map((giftData) => (
+        {filteredGifts.map((giftData) => (
           <div key={giftData.id} className="w-full sm:w-1/2 md:w-1/3">
             <GiftCard giftData={giftData} />
           </div>
