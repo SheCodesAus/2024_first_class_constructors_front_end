@@ -18,15 +18,17 @@ function WeddingPage() {
     setPriceFilter(null);
   };
 
-  const filteredGifts = gifts.filter(
-    (gift) =>
-      gift.categories.includes(3) &&
-      (!priceFilter || (gift.price >= priceFilter.min && gift.price <= priceFilter.max))
-  )
-  .sort((a,b) => a.price - b.price);
-  
+  const filteredGifts = gifts
+    .filter(
+      (gift) =>
+        gift.categories.includes(3) &&
+        (!priceFilter ||
+          (gift.price >= priceFilter.min && gift.price <= priceFilter.max))
+    )
+    .sort((a, b) => a.price - b.price);
+
   if (isLoading) {
-    return <IsLoading />
+    return <IsLoading />;
   }
 
   if (error) {
@@ -53,6 +55,11 @@ function WeddingPage() {
         updatePriceFilter={updatePriceFilter}
         clearPriceFilter={clearPriceFilter}
       />
+      {filteredGifts.length === 0 && (
+        <div className="text-primary-200 text-center">
+          No gifts in this range.
+        </div>
+      )}
       <div className="flex flex-wrap md:mx-6 lg:mx-20">
         {filteredGifts.map((giftData) => (
           <div key={giftData.id} className="w-full sm:w-1/2 md:w-1/3">
