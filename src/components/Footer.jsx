@@ -1,24 +1,32 @@
 function Footer() {
   return (
-    <div className="bg-primary-400 mt-6 relative">
-      <div className="flex flex-auto items-center relative">
-        <img
-          src="/assets/Images/bow_asset1.png"
-          alt="bow asset"
-          className=""
-        />
-        {/* This needs to be fixed responsivness */}
-        <div className="absolute top-24 left-24 right-24 bottom-12 lg:top-60 lg:left-60 lg:right-60 lg:bottom-40 flex flex-col justify-center items-center bg-slate-100 gap-2 xl:my-60 xl:mx-60">
+<div className="relative bg-primary-400 flex flex-col items-center">
+  <div className="items-center relative">
+    <img
+      src="/assets/Images/bow_asset1.png"
+      alt="bow asset"
+    />
+    <div className="absolute inset-0 top-16 flex justify-center items-center">
+      <div className="bg-slate-100 w-[250px] h-[120px] flex flex-col justify-center items-center md:w-[400px] md:h-[250px] lg:w-[450px] lg:h-[300px] xl:w-[500px] xl:h-[350px]">
+        <div className="flex flex-col items-center space-y-2">
           <img
             src="/assets/Images/GIFT_COMPARE_LOGO.svg"
             alt="Footer Logo"
-            className="w-20 h-auto bg-slate-100 px-0 py-6"
+            className="w-14 m-2 md:w-20 md:m-4"
           />
-          <p className="font-fredoka text-[14px] text-primary-200">Thank you for comparing your gifts with us!</p>
-          <p className="font-montserrat text-[10px] text-primary-200 mb-2">Gift Compare Pty Ltd 2024</p>
+          <div className="flex flex-col items-center space-y-1">
+            <p className="font-fredoka text-[12px] text-primary-200">
+              Thank you for comparing your gifts with us!
+            </p>
+            <p className="font-montserrat text-[10px] text-primary-200">
+              Gift Compare Pty Ltd 2024
+            </p>
+          </div>
         </div>
       </div>
     </div>
+  </div>
+</div>
   );
 }
 
