@@ -25,7 +25,7 @@ function ProfileCard() {
 
   return (
     <div className=" flex flex-col justify-center align-center space-y-8 my-12 mx-8">
-      <div className="bg-[url('public/assets/Images/pexels-photo-4040567.jpeg')] bg-cover bg-center flex justify-center items-center h-full">
+      <div className="bg-[url('/assets/Images/pexels-photo-4040567.jpeg')] bg-cover bg-center flex justify-center items-center h-full">
         <div className="bg-primary-500 px-6 my-14 md:mx-40 md:px-10 lg:px-20">
           <h1 className="font-fredoka text-slate-100 text-h1 text-center tracking-wider uppercase px-1">
             My Profile
