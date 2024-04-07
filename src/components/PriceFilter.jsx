@@ -1,7 +1,6 @@
 import React from "react";
 
 function PriceFilter({ priceFilter = { min: 0, max: 1000 }, updatePriceFilter, clearPriceFilter }) {
-    console.log("priceFilter:", priceFilter);
     const togglePriceFilter = (filterRange) => {
         if (priceFilter && priceFilter.min === filterRange.min && priceFilter.max === filterRange.max) {
             clearPriceFilter();
