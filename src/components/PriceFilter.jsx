@@ -62,7 +62,7 @@ function PriceFilter({ priceFilter = { min: 0, max: 1000 }, updatePriceFilter, c
                         {" "}
                         Above $250{" "}
                     </button>
-                    <button className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded" onClick={clearPriceFilter}>Clear Filter</button>
+                    <button className="border rounded-md bg-white border-primary-600 text-primary-300 font-bold py-2 px-4 rounded hover:bg-primary-300 hover:text-white py-2 px-4" onClick={clearPriceFilter}>Clear Filter</button>
                 </div>
             </div>
         </div>
