@@ -1,24 +1,44 @@
 import React from "react";
+import { useState } from "react";
 import useGifts from "../hooks/use-gifts";
 import GiftCard from "../components/GiftCard";
+import PriceFilter from "../components/PriceFilter";
 import IsLoading from "../components/IsLoading";
 import NotFoundMessage from "../components/NotFound";
 
 function ChristmasPage() {
   const { gifts, isLoading, error } = useGifts();
-  // const [errorMessage, setErrorMessage] = useState(null);
+  const [priceFilter, setPriceFilter] = useState(null);
 
-  const ChristmasGifts = gifts.filter((gift) =>
-    gift.categories.includes(5)
-  );
+  const updatePriceFilter = (filterValue) => {
+    setPriceFilter(filterValue);
+  };
+
+  const clearPriceFilter = () => {
+    setPriceFilter(null);
+  };
+
+  const filteredGifts = gifts
+    .filter(
+      (gift) =>
+        gift.categories.includes(5) &&
+        (!priceFilter ||
+          (gift.price >= priceFilter.min && gift.price <= priceFilter.max))
+    )
+    .sort((a, b) => a.price - b.price);
 
   if (isLoading) {
-    return <IsLoading />
+    return <IsLoading />;
   }
 
   if (error) {
-    return (<div className="flex flex-col items-center"> <NotFoundMessage />
-      <p>{error.message}</p> </div>)
+    return (
+      <div className="flex flex-col items-center">
+        {" "}
+        <NotFoundMessage />
+        <p>{error.message}</p>{" "}
+      </div>
+    );
   }
 
   return (
@@ -30,9 +50,18 @@ function ChristmasPage() {
           </h1>
         </div>
       </div>
-
+      <PriceFilter
+        priceFilter={priceFilter}
+        updatePriceFilter={updatePriceFilter}
+        clearPriceFilter={clearPriceFilter}
+      />
+      {filteredGifts.length === 0 && (
+        <div className="text-primary-200 text-center">
+          No gifts in this range.
+        </div>
+      )}
       <div className="flex flex-wrap mx-4 md:mx-6 lg:mx-20 xl:mx-44">
-        {ChristmasGifts.map((giftData) => (
+        {filteredGifts.map((giftData) => (
           <div key={giftData.id} className="w-full sm:w-1/2 md:w-1/3">
             <GiftCard giftData={giftData} />
           </div>

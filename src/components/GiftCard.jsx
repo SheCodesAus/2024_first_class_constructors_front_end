@@ -55,7 +55,6 @@ function GiftCard(props) {
       <h3 className="font-montserrat text-primary-100 text-[22px] tracking-wider">
         ${giftData.price}
       </h3>
-
       <div>
         <CompareButton onClick={handleAddGift} />
       </div>
