@@ -1,28 +1,48 @@
 import React from "react";
+import { useState } from "react";
 import useGifts from "../hooks/use-gifts";
-import IsLoading from "../components/IsLoading";
 import GiftCard from "../components/GiftCard";
+import PriceFilter from "../components/PriceFilter";
+import IsLoading from "../components/IsLoading";
 import NotFoundMessage from "../components/NotFound";
 
 function GraduationPage() {
   const { gifts, isLoading, error } = useGifts();
-  // const [errorMessage, setErrorMessage] = useState(null);
+  const [priceFilter, setPriceFilter] = useState(null);
 
-  const GraduationGifts = gifts.filter((gift) =>
-    gift.categories.includes(4)
-  );
+  const updatePriceFilter = (filterValue) => {
+    setPriceFilter(filterValue);
+  };
+
+  const clearPriceFilter = () => {
+    setPriceFilter(null);
+  };
+
+  const filteredGifts = gifts
+    .filter(
+      (gift) =>
+        gift.categories.includes(4) &&
+        (!priceFilter ||
+          (gift.price >= priceFilter.min && gift.price <= priceFilter.max))
+    )
+    .sort((a, b) => a.price - b.price);
 
   if (isLoading) {
-    return <IsLoading />
+    return <IsLoading />;
   }
 
   if (error) {
-    return (<div> <NotFoundMessage />
-      <p>{error.message}</p> </div>)
+    return (
+      <div className="flex flex-col items-center">
+        {" "}
+        <NotFoundMessage />
+        <p>{error.message}</p>{" "}
+      </div>
+    );
   }
 
   return (
-    <div className="flex flex-col justify-center align-center space-y-8 m-12">
+    <div className="flex flex-col justify-center align-center space-y-8 my-12 mx-8">
       <div className="bg-[url('/assets/Images/iStock-497740980.jpg')] bg-cover bg-center flex justify-center items-center h-full">
         <div className="bg-primary-500 px-6 my-14 md:mx-40 md:px-10 lg:px-20">
           <h1 className="font-fredoka  text-slate-100 text-h1 text-center tracking-wider uppercase px-1">
@@ -30,9 +50,18 @@ function GraduationPage() {
           </h1>
         </div>
       </div>
-
-      <div className="flex flex-wrap md:mx-6 lg:mx-20">
-        {GraduationGifts.map((giftData) => (
+      <PriceFilter
+        priceFilter={priceFilter}
+        updatePriceFilter={updatePriceFilter}
+        clearPriceFilter={clearPriceFilter}
+      />
+      {filteredGifts.length === 0 && (
+        <div className="text-primary-200 text-center">
+          No gifts in this range.
+        </div>
+      )}
+      <div className="flex flex-wrap mx-4 md:mx-6 lg:mx-20 xl:mx-44">
+        {filteredGifts.map((giftData) => (
           <div key={giftData.id} className="w-full sm:w-1/2 md:w-1/3">
             <GiftCard giftData={giftData} />
           </div>

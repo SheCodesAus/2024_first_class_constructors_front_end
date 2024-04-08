@@ -14,12 +14,12 @@ function BirthdaySection() {
     .filter((gift) => gift.categories.includes(1)).slice(0, 3)
 
   if (error) {
-    return (<div> <NotFoundMessage />
+    return (<div className="flex flex-col items-center"> <NotFoundMessage />
       <p>{error.message}</p> </div>)
   }
 
   return (
-    <div className="flex flex-col justify-center align-center space-y-10">
+    <div className="flex flex-col justify-center align-center space-y-8">
       <Link to="/BirthdayPage">
         <div className="bg-[url('/assets/Images/pexels-photo-796605.webp')] bg-cover bg-center flex justify-center items-center h-full">
           <div className="bg-primary-300 px-6 my-14 md:mx-40 md:px-10 lg:px-20">
@@ -29,7 +29,7 @@ function BirthdaySection() {
           </div>
         </div>
       </Link>
-      <div className="flex flex-wrap md:mx-6 lg:mx-20">
+      <div className="flex flex-wrap mx-4 md:mx-8 lg:mx-20 xl:mx-44">
         {isLoading ? (
           <IsLoading />
         ) : (BirthdayGifts.map((giftData) => (

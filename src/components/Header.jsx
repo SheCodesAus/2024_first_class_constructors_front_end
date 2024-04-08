@@ -13,11 +13,11 @@ function Header() {
   };
 
   return (
-    <div className="mt-4">
+    <div className="relative mt-4">
       <div className="mx-4 flex flex-row justify-between">
-        <h5 className="font-fredoka text-h5 text-primary-200">$ AUD</h5>
-        <div className="flex flex-row space-x-3">
-          {/* COMAPRE ICON */}
+        <h5 className="font-fredoka text-h5 uppercase text-primary-200">Currency: $ AUD</h5>
+        <div className="flex flex-row space-x-2">
+          {/* COMPARE ICON */}
           <div className="flex flex-row gap-4">
             <NavLink to="/compare">
               <img
@@ -31,7 +31,7 @@ function Header() {
           {/* USER NAVIGATION */}
           <nav>
             {auth.token ? (
-              <ul className="flex flex-row space-x-3">
+              <ul className="flex flex-row space-x-2">
                 <li>
                   <NavLink to="/ProfilePage">
                     <img

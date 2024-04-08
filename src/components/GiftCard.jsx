@@ -35,13 +35,13 @@ function GiftCard(props) {
       <div className="">
         <Link to={`/gift/${giftData.id}`}>
           <div
-            className="rounded-md relative overflow-hidden bg-white border-[1px]  border-primary-600 border-opacity-80"
+            className="rounded-md relative overflow-hidden bg-white border-[1px] border-primary-600 border-opacity-80"
             style={{ paddingBottom: "100%" }}
           >
             <img
               src={giftData.img}
               alt={giftData.name}
-              className="absolute inset-0 object-cover w-full h-full"
+              className="absolute inset-0 object-cover w-full h-full p-4"
             />
           </div>
         </Link>
@@ -52,10 +52,9 @@ function GiftCard(props) {
           {giftData.name}
         </h3>
       </div>
-      <h3 className="font-montserrat  text-primary-100  text-[22px] tracking-wider">
-        {giftData.price}
+      <h3 className="font-montserrat text-primary-100 text-[22px] tracking-wider">
+        ${giftData.price}
       </h3>
-
       <div>
         <CompareButton onClick={handleAddGift} />
       </div>

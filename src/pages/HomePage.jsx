@@ -9,7 +9,7 @@ import AnniversarySection from "../components/AnniversarySection";
 
 export default function HomePage() {
   return (
-    <div className="m-12">
+    <div className="my-12 mx-8 md:m-12">
       <div className="flex flex-col space-y-20">
         <TrendingSection />
         {/* <BudgetSection /> */}
