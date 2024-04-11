@@ -79,12 +79,12 @@ A secondary navigation bar lets you browse gifts by different events, like weddi
 
 ## Live Documentation:
 
-### MVP analysis
-Mission, Features, Technical Implementation, Target Audience, DB schema and more can be seen here: [MVP-GiftCompare](https://docs.google.com/document/d/13U_GGJJ0fx9G3RPJSggjvk01SafdA8-5/edit?hl=en_GB&pli=1)
+### MVP outline (Minimum Viable Product)
+Mission, Features, Technical Implementation, Target Audience, DB schema and more can be seen here: [MVP-GiftCompare](https://drive.google.com/file/d/1Vay_bz7rT70oqkt4B4HFIMyvfHnar9ud/view?usp=drive_link)
 
 
 ### Showcase slides
 
 The MVP product was presented to the She Codes Plus class and the Client, Estera Herman - Customer Success Manager at Horizon Digital.
 
-Check out the presentation slides at this link: [GiftComparePreso](https://docs.google.com/presentation/d/1tVhDPQ2d_CFtgtdDLOgXP1ouq_zACwj5/edit#slide=id.g2c97dd84771_1_195)
+Check out the presentation slides at this link: [GiftComparePreso](https://drive.google.com/file/d/1LS0WqzMx5n_eOSrRnorIBxoWdK78UM6A/view?usp=drive_link)
